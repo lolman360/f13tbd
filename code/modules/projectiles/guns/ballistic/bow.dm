@@ -124,7 +124,7 @@
 //Silver Bow
 /obj/item/gun/ballistic/bow/titanium
 	name = "titanium bow"
-	desc = "A firm sturdy silver bow created by the earth, its durability and rather strong material allow it to be an excellent option for those looking for the ability to fire more arrows than normally."
+	desc = "A firm sturdy titanium bow created by the earth, its durability and rather strong material allow it to be an excellent option for those looking for the ability to fire more arrows than normally."
 	icon_state = "pipebow"
 	item_state = "pipebow"
 	icon_prefix = "pipebow"
