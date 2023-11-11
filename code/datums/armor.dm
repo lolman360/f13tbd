@@ -37,7 +37,7 @@
 	return getArmor(melee+modifier, bullet+modifier, laser+modifier, energy+modifier, bomb+modifier, bio+modifier, rad+modifier, fire+modifier, acid+modifier, magic+modifier, wound+modifier)
 
 /datum/armor/proc/setRating(melee, bullet, laser, energy, bomb, bio, rad, fire, acid, magic, wound)
-	return getArmor(((isnull(melee) ? src.melee : melee),\
+	return getArmor((isnull(melee) ? src.melee : melee),\
 					(isnull(bullet) ? src.bullet : bullet),\
 					(isnull(laser) ? src.laser : laser),\
 					(isnull(energy) ? src.energy : energy),\
