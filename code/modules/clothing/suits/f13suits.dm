@@ -544,7 +544,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	item_state = "follower_medium"
-	armor = list("melee" = 40, "bullet" = 50, "laser" = 35, "energy" = 35, "bomb" = 20, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 80, "wound" = 40)
+	armor = list("melee" = 30, "bullet" = 40, "laser" = 25, "energy" = 25, "bomb" = 20, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 80, "wound" = 20)
 
 /obj/item/clothing/suit/hooded/followerheavy
 	name = "\improper Followers guard heavy armor"
@@ -554,7 +554,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit_cosmetic.dmi'
 	icon_state = "follower_heavy"
 	item_state = "follower_heavy"
-	armor = list("melee" = 45, "bullet" = 50, "laser" = 35, "energy" = 35, "bomb" = 20, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 80, "wound" = 30)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 35, "bomb" = 20, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 80, "wound" = 30)
 	slowdown = 0.20
 
 /obj/item/clothing/head/hooded/followerheavy
@@ -564,4 +564,4 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	item_state = "follower_heavy"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 50, "energy" = 35, "bomb" = 20, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 80, "wound" = 50)
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 35, "energy" = 35, "bomb" = 20, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 80, "wound" = 30)
