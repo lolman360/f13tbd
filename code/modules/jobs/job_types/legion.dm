@@ -368,7 +368,7 @@ Discuss balance and documentation changes with Dragonfruits#1913 or forward them
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m10mm_adv = 2,
 		/obj/item/melee/onehanded/machete/spatha = 1,
-		/obj/item/shield/riot/tower
+		/obj/item/shield/riot/tower = 1
 		)
 
 /datum/outfit/loadout/decvetwolf
