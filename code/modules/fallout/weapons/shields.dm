@@ -178,7 +178,6 @@
 	block_stamina_efficiency = 10
 	block_stamina_cost_per_second = 2
 	block_damage_absorption = 20
-	block_damage_limit = 160
 	block_start_delay = 15 //1.5 second to start blocking
 
 /obj/item/shield/riot/tower/scrap
