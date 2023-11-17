@@ -397,7 +397,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 		/obj/item/storage/bag/plants=1,
 		/obj/item/cultivator=1,
 		/obj/item/reagent_containers/glass/bucket/wood=1,
-		/obj/item/melee/onehanded/knife/ritualdagger/baghead = 1,
+		/obj/item/melee/onehanded/club/warclub = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/book/granter/crafting_recipe/tribal/deadhorses = 1
 	)
