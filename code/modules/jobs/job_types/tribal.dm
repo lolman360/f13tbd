@@ -373,7 +373,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 	backpack_contents = list(
 		/obj/item/clothing/under/f13/deadhorses = 1,
 		/obj/item/clothing/under/f13/female/deadhorses = 1,
-		/obj/item/melee/onehanded/club/warclub = 1,
+		/obj/item/twohanded/sledgehammer/warmace = 1,
 		/obj/item/storage/backpack/spearquiver = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2
 	)
@@ -397,6 +397,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 		/obj/item/storage/bag/plants=1,
 		/obj/item/cultivator=1,
 		/obj/item/reagent_containers/glass/bucket/wood=1,
+		/obj/item/melee/onehanded/knife/ritualdagger/baghead = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/book/granter/crafting_recipe/tribal/deadhorses = 1
 	)
