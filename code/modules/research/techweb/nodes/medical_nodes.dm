@@ -147,8 +147,8 @@
 
 /datum/techweb_node/alien_surgery
 	id = "alien_surgery"
-	display_name = "Alien Surgery"
-	description = "Abductors did nothing wrong."
-	prereq_ids = list("exp_surgery", "alientech")
+	display_name = "Bleeding-Edge Surgery"
+	description = "The tech is bleeding(-edge), so your patients don't!"
+	prereq_ids = list("exp_surgery")
 	design_ids = list("surgery_brainwashing","surgery_zombie", "surgery_ext_dissection", "surgery_heal_combo_upgrade_femto")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 20000)
