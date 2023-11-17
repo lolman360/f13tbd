@@ -110,8 +110,8 @@
 
 
 	if(harvest)
-		cycledelay = initial(cycledelay) + 2 MINUTES
-	else if(cycledelay > 2 MINUTES)
+		cycledelay = initial(cycledelay) + 5 MINUTES
+	else if(cycledelay > 5 MINUTES)
 		cycledelay = initial(cycledelay)
 
 	if(world.time > (lastcycle + cycledelay))
@@ -454,7 +454,7 @@
 	age = 0
 	plant_health = myseed.endurance
 	lastcycle = world.time
-	if(cycledelay > 2 MINUTES)
+	if(cycledelay > 5 MINUTES)
 		cycledelay = initial(cycledelay)
 	harvest = 0
 	weedlevel = 0 // Reset
@@ -493,7 +493,7 @@
 	age = 0
 	plant_health = myseed.endurance
 	lastcycle = world.time
-	if(cycledelay > 2 MINUTES)
+	if(cycledelay > 5 MINUTES)
 		cycledelay = initial(cycledelay)
 	harvest = 0
 	weedlevel = 0 // Reset
@@ -515,7 +515,7 @@
 		age = 0
 		plant_health = myseed.endurance
 		lastcycle = world.time
-		if(cycledelay > 2 MINUTES)
+		if(cycledelay > 5 MINUTES)
 			cycledelay = initial(cycledelay)
 		harvest = 0
 		weedlevel = 0 // Reset
@@ -535,7 +535,7 @@
 /obj/machinery/hydroponics/proc/plantdies()
 	plant_health = 0
 	harvest = FALSE
-	if(cycledelay > 2 MINUTES)
+	if(cycledelay > 5 MINUTES)
 		cycledelay = initial(cycledelay)
 	pestlevel = 0 // Pests die
 	lastproduce = 0
@@ -698,7 +698,7 @@
 				plant_health = 0
 				if(harvest)
 					harvest = FALSE //To make sure they can't just put in another seed and insta-harvest it
-				if(cycledelay > 2 MINUTES)
+				if(cycledelay > 5 MINUTES)
 					cycledelay = initial(cycledelay)
 				qdel(myseed)
 				myseed = null
@@ -765,7 +765,7 @@
 
 /obj/machinery/hydroponics/proc/update_tray(mob/user)
 	harvest = FALSE
-	if(cycledelay > 2 MINUTES)
+	if(cycledelay > 5 MINUTES)
 		cycledelay = initial(cycledelay)
 	lastproduce = age
 	if(myseed.getYield() <= 0)
@@ -803,11 +803,9 @@
 	weedlevel = clamp(weedlevel + adjustamt, 0, 10)
 
 /obj/machinery/hydroponics/proc/adjustSelfSuff(adjustamt)
-	if(self_sustainingprog>19)
+	self_sustainingprog += adjustamt
+	if(self_sustainingprog>19 && !self_sustaining)
 		become_self_sufficient()
-	else
-		self_sustainingprog += adjustamt
-
 /obj/machinery/hydroponics/proc/spawnplant() // why would you put strange reagent in a hydro tray you monster I bet you also feed them blood
 	var/list/livingplants = list(/mob/living/simple_animal/hostile/tree, /mob/living/simple_animal/hostile/killertomato)
 	var/chosen = pick(livingplants)
