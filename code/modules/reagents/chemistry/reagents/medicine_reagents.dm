@@ -501,24 +501,25 @@
 		var/mob/living/carbon/C = M
 		if(M.stat == DEAD)
 			show_message = 0
-		if (method == TOUCH)
-			if(show_message)
-				to_chat(M, "<span class='warning'>The synthflesh doesn't adhere properly, running down your body without effect! It feels slimy.</span>")
-			M.emote("shiver")
 		if(method in list(INGEST, VAPOR))
 			C.losebreath++
 			C.emote("cough")
 			to_chat(M, "<span class='danger'>You feel your throat closing up!</span>")
 		else if(method == INJECT)
 			return
-		else if(method == PATCH)
-			M.adjustBruteLoss(-1 * reac_volume)
-			M.adjustFireLoss(-1 * reac_volume)
-			for(var/i in C.all_wounds)
-				var/datum/wound/iter_wound = i
-				iter_wound.on_synthflesh(reac_volume)
-			if(show_message)
-				to_chat(M, "<span class='danger'>You feel your burns and bruises healing! It stings like hell!</span>")
+		else if(method in list(PATCH, TOUCH))
+			if (method == TOUCH)
+				if(show_message)
+					to_chat(M, "<span class='warning'>The synthflesh doesn't adhere completely, running down your body with little effect! It feels slimy.</span>")
+				M.emote("shiver")
+			else
+				M.adjustBruteLoss(-1 * reac_volume)
+				M.adjustFireLoss(-1 * reac_volume)
+				for(var/i in C.all_wounds)
+					var/datum/wound/iter_wound = i
+					iter_wound.on_synthflesh(reac_volume)
+				if(show_message)
+					to_chat(M, "<span class='danger'>You feel your burns and bruises healing! It stings like hell!</span>")
 			SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "painful_medicine", /datum/mood_event/painful_medicine)
 			var/vol = reac_volume + M.reagents.get_reagent_amount(/datum/reagent/medicine/synthflesh)
 			//Has to be at less than THRESHOLD_UNHUSK burn damage and have 100 synthflesh before unhusking. Corpses dont metabolize.
