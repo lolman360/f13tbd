@@ -30,7 +30,7 @@
 	icon_state = "leather_jacket"
 	item_state = "leather_jacket"
 	desc = "A black, heavy leather jacket. Looks like it has spare pockets."
-	armor = list("melee" = 25, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 10)
+	armor = list("melee" = 30, "bullet" = 25, "laser" = 15, "energy" = 5, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 10)
 	slowdown = 0.025 //token slowdown
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets
 
@@ -39,7 +39,6 @@
 	icon_state = "combat_jacket"
 	item_state = "combat_jacket"
 	desc = "This heavily padded leather jacket is unusual in that it has two sleeves and bullet belts draped across it. You'll definitely make a fashion statement whenever, and wherever, you rumble."
-	armor = list("melee" = 30, "bullet" = 20, "laser" = 20, "energy" = 15, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25, "wound" = 10)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bulletbelt
 
 /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
@@ -47,7 +46,7 @@
 	icon_state = "combat_coat"
 	item_state = "combat_coat"
 	desc = "A combat leather jacket, outfitted with a special armored leather coat."
-	armor = list("melee" = 35, "bullet" = 22, "laser" = 22, "energy" = 15, "bomb" = 45, "bio" = 30, "rad" = 5, "fire" = 50, "acid" = 35, "wound" = 10)
+	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 5, "bomb" = 20, "bio" = 0, "rad" = 5, "fire" = 50, "acid" = 35, "wound" = 10)
 
 /obj/item/clothing/suit/armor/f13/leather_jacket/combat/sierra
 	name = "Sierra suit jacket"
@@ -845,7 +844,7 @@
 	icon_state = "sulphite"
 	item_state = "sulphite"
 	armor = list("melee" = 25, "bullet" = 55,"laser" = 40, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 40)
-	slowdown = 0.20
+	slowdown = 0.1
 
 /obj/item/clothing/suit/toggle/armor
 	body_parts_covered = CHEST|GROIN

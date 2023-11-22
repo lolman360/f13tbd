@@ -617,7 +617,6 @@
 
 /datum/reagent/medicine/mentat
 	name = "Mentat Powder"
-
 	description = "A powerful drug that heals and increases the perception and intelligence of the user."
 	color = "#C8A5DC"
 	reagent_state = SOLID
@@ -627,11 +626,30 @@
 
 /datum/reagent/medicine/mentat/on_mob_life(mob/living/carbon/M)
 	M.adjustOxyLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
+	if (prob(5))
+		to_chat(M, "<span class='notice'>You feel way more intelligent!</span>")
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -2*REM)
+	if(M.getOrganLoss(ORGAN_SLOT_BRAIN) == 0)
+		M.cure_all_traumas(TRAUMA_RESILIENCE_SURGERY)
 	var/obj/item/organ/eyes/eyes = M.getorganslot(ORGAN_SLOT_EYES)
 	if (!eyes)
 		return
-	if(M.getOrganLoss(ORGAN_SLOT_BRAIN) == 0)
-		M.cure_all_traumas(TRAUMA_RESILIENCE_SURGERY)
+	eyes.applyOrganDamage(-2)
+	if(HAS_TRAIT_FROM(M, TRAIT_BLIND, EYE_DAMAGE))
+		if(prob(20))
+			to_chat(M, "<span class='warning'>Your vision slowly returns...</span>")
+			M.cure_blind(EYE_DAMAGE)
+			M.cure_nearsighted(EYE_DAMAGE)
+			M.blur_eyes(35)
+	else if(HAS_TRAIT_FROM(M, TRAIT_NEARSIGHT, EYE_DAMAGE))
+		to_chat(M, "<span class='warning'>The blackness in your peripheral vision fades.</span>")
+		M.cure_nearsighted(EYE_DAMAGE)
+		M.blur_eyes(10)
+	else if(M.eye_blind || M.eye_blurry)
+		M.set_blindness(0)
+		M.set_blurriness(0)
+		to_chat(M, "<span class='warning'>Your vision slowly returns to normal...</span>")
+
 /*	if(HAS_TRAIT(M, TRAIT_BLIND, TRAIT_GENERIC))
 		if(prob(20))
 			to_chat(M, "<span class='warning'>Your vision slowly returns...</span>")
@@ -642,15 +660,8 @@
 		to_chat(M, "<span class='warning'>The blackness in your peripheral vision fades.</span>")
 		M.cure_nearsighted(EYE_DAMAGE)
 		M.blur_eyes(10)*/
-	else if(M.eye_blind || M.eye_blurry)
-		M.set_blindness(0)
-		M.set_blurriness(0)
-		to_chat(M, "<span class='warning'>Your vision slowly returns to normal...</span>")
-//	else if(eyes.eye_damage > 0)
-//		M.adjust_eye_damage(-1)
-//	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -2)
-	if (prob(5))
-		to_chat(M, "<span class='notice'>You feel way more intelligent!</span>")
+
+
 	..()
 	. = TRUE
 
