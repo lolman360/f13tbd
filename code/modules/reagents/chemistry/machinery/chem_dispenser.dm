@@ -603,6 +603,7 @@
 	)
 /obj/machinery/chem_dispenser/drinks/beer/fullupgrade //equivalent to fully ugpraded stock parts, emagged
 	desc = "An advanced self-contained dispenser for various kinds of hard drinks. This one is capable of producing some more esoteric concoctions."
+	circuit = /obj/item/circuitboard/machine/chem_dispenser/drinks/beer/fullupgrade
 	obj_flags = CAN_BE_HIT | EMAGGED
 
 /obj/machinery/chem_dispenser/drinks/beer/fullupgrade/RefreshParts()
