@@ -341,7 +341,7 @@
 
 /datum/chemical_reaction/medsuture
 	id = "medsuture"
-	required_reagents = list(/datum/reagent/cellulose = 10, /datum/reagent/toxin/formaldehyde = 20, /datum/reagent/medicine/polypyr = 10) //This might be a bit much, reagent cost should be reviewed after implementation.
+	required_reagents = list(/datum/reagent/cellulose = 10, /datum/reagent/medicine/stimpakimitation = 20, /datum/reagent/abraxo_cleaner/sterilizine = 5)
 
 /datum/chemical_reaction/medsuture/on_reaction(datum/reagents/holder, created_volume)
 	var/location = get_turf(holder.my_atom)
@@ -350,7 +350,7 @@
 
 /datum/chemical_reaction/medmesh
 	id = "medmesh"
-	required_reagents = list(/datum/reagent/cellulose = 10, /datum/reagent/consumable/aloejuice = 10, /datum/reagent/abraxo_cleaner/sterilizine = 10)
+	required_reagents = list(/datum/reagent/cellulose = 10, /datum/reagent/consumable/agavejuice = 10, /datum/reagent/abraxo_cleaner/sterilizine = 10)
 
 /datum/chemical_reaction/medmesh/on_reaction(datum/reagents/holder, created_volume)
 	var/location = get_turf(holder.my_atom)
@@ -431,4 +431,3 @@
 	id = "rehab"
 	results = list(/datum/reagent/medicine/rehab = 1)
 	required_reagents = list(/datum/reagent/medicine/stimpakimitation = 1, /datum/reagent/consumable/ethanol/pungajuice = 1, /datum/reagent/consumable/buffalojuice = 1, /datum/reagent/consumable/ferajuice = 1)
-
