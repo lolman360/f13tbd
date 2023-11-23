@@ -723,7 +723,6 @@
 	lootcount = 1
 
 	loot = list(/obj/item/twohanded/thermic_lance,
-				/obj/item/twohanded/chainsaw,
 				/obj/item/twohanded/sledgehammer/rockethammer,
 				/obj/item/melee/powered/ripper,
 				/obj/item/melee/powerfist/f13,
