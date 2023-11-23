@@ -327,6 +327,19 @@
 	subcategory = CAT_AMMO
 	always_available = FALSE
 
+/datum/crafting_recipe/c4570boxheavy
+	name = ".45-70 Gv'mt ultradense ammo box"
+	result = /obj/item/ammo_box/c4570box/knockback
+	reqs = list(/obj/item/stack/crafting/metalparts = 2,
+	/obj/item/stack/sheet/mineral/titanium = 1,
+	/obj/item/stack/sheet/prewar = 2,
+	/obj/item/stack/ore/blackpowder = 1
+	)
+	tools = list(TOOL_AWORKBENCH)
+	time = 5
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /////////////////
 ///GUN CRAFTING//
 /////////////////
