@@ -720,8 +720,8 @@
 /datum/status_effect/stacking/saw_bleed/serrated
 	id = "serratedarrowbleed"
 	delay_before_decay = 16
-	stack_threshold = 3
-	max_stacks = 3
+	stack_threshold = 2
+	max_stacks = 2
 	bleed_damage = 60 //60 damage / 3 hits, +20 on hit. a full bow magazine therefore does 30+20+20 * 3 = 210 damage
 	overlay_state = "serrated"
 	underlay_state = "serrated"
