@@ -50,15 +50,13 @@
 /datum/chemical_reaction/proc/chemical_mob_spawn(datum/reagents/holder, amount_to_spawn, reaction_name, mob_class = HOSTILE_SPAWN, mob_faction = "chemicalsummon")
 	if(holder && holder.my_atom)
 		var/atom/A = holder.my_atom
+		playsound(get_turf(A), 'sound/effects/phasein.ogg', 100, 1)
 
-
-		playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
-
-		for(var/mob/living/carbon/C in viewers(get_turf(holder.my_atom), null))
+		for(var/mob/living/carbon/C in viewers(get_turf(A), null))
 			C.flash_act()
 
 		for(var/i in 1 to amount_to_spawn)
-			var/mob/living/simple_animal/S = create_random_mob(get_turf(holder.my_atom), mob_class)
+			var/mob/living/simple_animal/S = create_random_mob(get_turf(A), mob_class)
 			S.faction |= mob_faction
 			if(prob(50))
 				for(var/j = 1, j <= rand(1, 3), j++)
