@@ -554,12 +554,8 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit_cosmetic.dmi'
 	icon_state = "follower_heavy"
 	item_state = "follower_heavy"
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 35, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
-	slowdown = 0.12
-
-/obj/item/clothing/suit/hooded/followerheavy/followerheavy/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/armor_plate/weak)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 35, "energy" = 35, "bomb" = 20, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 80, "wound" = 30)
+	slowdown = 0.20
 
 /obj/item/clothing/head/hooded/followerheavy
 	name = "\improper Followers guard heavy armor hood"
@@ -568,8 +564,4 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	item_state = "follower_heavy"
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 35, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
-
-/obj/item/clothing/head/hooded/followerheavy/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/armor_plate/weak)
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 35, "energy" = 35, "bomb" = 20, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 80, "wound" = 30)
