@@ -46,8 +46,6 @@
 	/// A list of categories that valid MECHFAB design datums will broadly categorise themselves under.
 	var/list/part_sets = list(
 								"Cyborg",
-								"Exosuit Equipment",
-								"Exosuit Ammunition",
 								"Cyborg Upgrade Modules",
 								"Cybernetics",
 								"Implants",
