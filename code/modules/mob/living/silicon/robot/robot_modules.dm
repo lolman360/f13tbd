@@ -448,7 +448,7 @@
 	emag_modules = list(/obj/item/gun/energy/laser/cyborg)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/security,
 		/obj/item/clockwork/weapon/ratvarian_spear)
-	cyborg_base_icon = "sec"
+	cyborg_base_icon = "peace"
 	borghealth = 450
 	moduleselect_icon = "security"
 	hat_offset = 3
@@ -458,14 +458,14 @@
 	var/static/list/sec_icons
 	if(!sec_icons)
 		sec_icons = list(
-		"Default" = image(icon = 'icons/mob/robots.dmi', icon_state = "sec"),
+		"Default" = image(icon = 'icons/mob/robots.dmi', icon_state = "peace"),
 		"Assaultron" = image(icon = 'icons/mob/robots.dmi', icon_state = "assaultron"),
 		)
 		sec_icons = sortList(sec_icons)
 	var/sec_borg_icon = show_radial_menu(R, R , sec_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(sec_borg_icon)
 		if("Default")
-			cyborg_base_icon = "sec"
+			cyborg_base_icon = "peace"
 		if("Assaultron")
 			cyborg_base_icon = "assaultron"
 		else

@@ -652,7 +652,7 @@ as performing this in action() will cause the upgrade to end up in the borg inst
 	module_type = list(
 		/obj/item/robot_module/medical,
 		/obj/item/robot_module/syndicate_medical,
-		/obj/item/robot_module/medihound,)
+		/obj/item/robot_module/medihound)
 	module_flags = BORG_MODULE_MEDICAL
 
 /obj/item/borg/upgrade/pinpointer/action(mob/living/silicon/robot/R, user = usr)
@@ -694,7 +694,7 @@ as performing this in action() will cause the upgrade to end up in the borg inst
 	action_icon_state = "Chevron_State_0"
 
 	var/currentState = 0
-	var/maxReduction = 1
+	var/maxReduction = 0.25
 
 
 /obj/effect/proc_holder/silicon/cyborg/vtecControl/Trigger(mob/living/silicon/robot/user)

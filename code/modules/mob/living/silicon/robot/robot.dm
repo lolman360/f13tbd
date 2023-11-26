@@ -145,14 +145,9 @@
 	"Miner" = /obj/item/robot_module/miner,
 	"Service" = /obj/item/robot_module/butler,
 	"Gutsy" = /obj/item/robot_module/gutsy,
+	"Security" = /obj/item/robot_module/security
 	)
 
-	//modulelist += get_cit_modules() //Citadel change - adds Citadel's borg modules.
-
-	if(!CONFIG_GET(flag/disable_peaceborg))
-		modulelist["Peacekeeper"] = /obj/item/robot_module/peacekeeper
-	if(BORG_SEC_AVAILABLE)
-		modulelist["Security"] = /obj/item/robot_module/security
 
 	var/input_module = input("Please, select a module!", "Robot", null, null) as null|anything in modulelist
 	if(!input_module || module.type != /obj/item/robot_module)
