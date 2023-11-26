@@ -21,6 +21,6 @@
 
 /mob/living/silicon/robot/movement_delay()
 	. = ..()
-	if(!resting && !(combat_flags & COMBAT_FLAG_SPRINT_ACTIVE))
-		. += 1
+	if(!resting && (combat_flags & COMBAT_FLAG_SPRINT_ACTIVE))
+		. -= 1
 	. += speed

@@ -629,6 +629,19 @@
 	else if(istype(A, /turf/closed))
 		playsound(loc, hitsound, 80, TRUE)
 
+// Robot rocket sledge, 12 less damage but mines better
+/obj/item/twohanded/sledgehammer/rockethammer/robot
+	name = "mounted rocket-assisted sledgehammer"
+	desc = "This pre-War model was originally used by construction robots for demolition. Fitted with a rocket booster at the head, \
+	the sledgehammer would behave like a normal tool until it reached a certain acceleration point, when the booster would activate  \
+	and deliver a tremendously powerful impact, easily crushing concrete."
+	digrange = 2
+
+/obj/item/twohanded/sledgehammer/rockethammer/robot/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/two_handed, force_unwielded = 20, force_wielded = 40, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/knockback, 1, FALSE, TRUE)
+
 // The Court Martial	Keywords: UNIQUE, Damage 20/52, Inferior mining
 /obj/item/twohanded/sledgehammer/rockethammer/courtmartial
 	name = "the court martial"
