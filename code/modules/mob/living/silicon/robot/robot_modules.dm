@@ -109,6 +109,10 @@
 			G.source = get_or_create_estorage(/datum/robot_energy_storage/metal)
 			G.glasource = get_or_create_estorage(/datum/robot_energy_storage/glass)
 
+		else if(istype(S, /obj/item/stack/sheet/mineral/wood))
+			S.cost = 500
+			S.source = get_or_create_estorage(/datum/robot_energy_storage/wood)
+
 		else if(istype(S, /obj/item/stack/medical))
 			S.cost = 250
 			S.source = get_or_create_estorage(/datum/robot_energy_storage/medical)
@@ -394,7 +398,8 @@
 		/obj/item/stack/sheet/rglass/cyborg,
 		/obj/item/stack/rods/cyborg,
 		/obj/item/stack/tile/plasteel/cyborg,
-		/obj/item/stack/cable_coil/cyborg)
+		/obj/item/stack/cable_coil/cyborg,
+		/obj/item/stack/sheet/mineral/wood/cyborg)
 	emag_modules = list(/obj/item/twohanded/sledgehammer/rockethammer/robot)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/engineer,
@@ -643,6 +648,7 @@
 		/obj/item/clockwork/weapon/ratvarian_spear,
 		/obj/item/borg/sight/xray/truesight_lens)
 	cyborg_base_icon = "miner"
+	borghealth = 450
 	moduleselect_icon = "miner"
 	hat_offset = 0
 
@@ -771,6 +777,7 @@
 		/obj/item/stack/sheet/rglass/cyborg,
 		/obj/item/stack/rods/cyborg,
 		/obj/item/stack/tile/plasteel/cyborg,
+		/obj/item/stack/sheet/mineral/wood/cyborg,
 		/obj/item/destTagger/borg,
 		/obj/item/stack/cable_coil/cyborg,
 		/obj/item/pinpointer/syndicate_cyborg,
@@ -816,6 +823,9 @@
 
 /datum/robot_energy_storage/glass
 	name = "Glass Synthesizer"
+
+/datum/robot_energy_storage/wood
+	name = "Wood Synthesizer"
 
 /datum/robot_energy_storage/wire
 	max_energy = 50

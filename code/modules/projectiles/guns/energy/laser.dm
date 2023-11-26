@@ -273,7 +273,7 @@
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
 /obj/item/gun/energy/laser/pistol/cyborg
-	name = "\improper assaultron AEP7 laser eye"
+	name = "\improper integrated AEP7 laser pistol"
 	desc = "A basic energy-based laser projector that fires concentrated beams of light from your eye! It draws power from your cell so try not to go crazy."
 	can_scope = FALSE
 	can_charge = FALSE
