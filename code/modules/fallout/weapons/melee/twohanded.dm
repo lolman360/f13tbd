@@ -637,7 +637,6 @@
 	the sledgehammer would behave like a normal tool until it reached a certain acceleration point, when the booster would activate  \
 	and deliver a tremendously powerful impact, easily crushing concrete."
 	digrange = 2
-	knockback = 0
 
 /obj/item/twohanded/sledgehammer/rockethammer/robot/ComponentInitialize()
 	. = ..()
