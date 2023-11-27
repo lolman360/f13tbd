@@ -631,7 +631,8 @@
 		/obj/item/crowbar/cyborg,
 		/obj/item/borg/sight/meson,
 		/obj/item/storage/bag/ore/cyborg,
-		/obj/item/twohanded/sledgehammer/rockethammer/robot,
+		/obj/item/pickaxe/drill/cyborg,
+		/obj/item/shovel,
 		/obj/item/kinetic_crusher/cyborg,
 		/obj/item/weldingtool/mini,
 		/obj/item/storage/bag/sheetsnatcher/borg,
@@ -641,8 +642,9 @@
 		/obj/item/gps/cyborg,
 		/obj/item/weapon/gripper/mining,
 		/obj/item/cyborg_clamp,
-		/obj/item/stack/marker_beacon)
-	emag_modules = list(/obj/item/borg/stun)
+		/obj/item/stack/marker_beacon,
+		/obj/item/metaldetector/cyborg)
+	emag_modules = list(/obj/item/twohanded/sledgehammer/rockethammer/robot)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/miner,
 		/obj/item/clockwork/weapon/ratvarian_spear,

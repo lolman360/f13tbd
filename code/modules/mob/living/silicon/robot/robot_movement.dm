@@ -23,4 +23,6 @@
 	. = ..()
 	if(!resting && (combat_flags & COMBAT_FLAG_SPRINT_ACTIVE))
 		. -= 0.5
+	else
+		. += 0.25 //borgs have 0.25 slowdown by default, since they're tanky af
 	. += speed

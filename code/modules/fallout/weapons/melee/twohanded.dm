@@ -610,11 +610,12 @@
 	var/digrange = 1
 	var/attacksound = "sound/f13effects/explosion_distant_2.ogg"
 	var/sound = "sound/f13effects/explosion_distant_2.ogg"
+	var/knockback = 1
 
 /obj/item/twohanded/sledgehammer/rockethammer/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded = 20, force_wielded = 52, icon_wielded="[icon_prefix]2")
-	AddComponent(/datum/component/knockback, 1, FALSE, TRUE)
+	AddComponent(/datum/component/knockback, knockback, FALSE, TRUE)
 
 /obj/item/twohanded/sledgehammer/rockethammer/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -636,6 +637,7 @@
 	the sledgehammer would behave like a normal tool until it reached a certain acceleration point, when the booster would activate  \
 	and deliver a tremendously powerful impact, easily crushing concrete."
 	digrange = 2
+	knockback = 0
 
 /obj/item/twohanded/sledgehammer/rockethammer/robot/ComponentInitialize()
 	. = ..()

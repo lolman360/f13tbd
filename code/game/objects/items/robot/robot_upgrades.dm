@@ -165,9 +165,6 @@ as performing this in action() will cause the upgrade to end up in the borg inst
 	if(.)
 		for(var/obj/item/pickaxe/drill/cyborg/D in R.module)
 			R.module.remove_module(D, TRUE)
-		for(var/obj/item/shovel/S in R.module)
-			R.module.remove_module(S, TRUE)
-
 		var/obj/item/pickaxe/drill/cyborg/diamond/DD = new /obj/item/pickaxe/drill/cyborg/diamond(R.module)
 		R.module.basic_modules += DD
 		R.module.add_module(DD, FALSE, TRUE)
@@ -181,9 +178,6 @@ as performing this in action() will cause the upgrade to end up in the borg inst
 		var/obj/item/pickaxe/drill/cyborg/D = new (R.module)
 		R.module.basic_modules += D
 		R.module.add_module(D, FALSE, TRUE)
-		var/obj/item/shovel/S = new (R.module)
-		R.module.basic_modules += S
-		R.module.add_module(S, FALSE, TRUE)
 
 
 /obj/item/borg/upgrade/advcutter
