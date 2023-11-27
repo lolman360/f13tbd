@@ -98,6 +98,7 @@
 #define F13LEGIONSLAVE	(1<<14)
 #define F13CAMPFOLLOWER (1<<16)
 #define F13SLAVEMASTER	(1<<17)
+#define F13IMMUNE		(1<<18)
 
 #define BOS				(1<<5)
 
@@ -198,7 +199,7 @@
 #define JOB_UNAVAILABLE_WHITELIST 7
 
 #define DEFAULT_RELIGION "Christianity"
-#define DEFAULT_DEITY "Space Jesus"
+#define DEFAULT_DEITY "God"
 
 #define JOB_DISPLAY_ORDER_DEFAULT 0
 

@@ -212,8 +212,8 @@
 /datum/chemical_reaction/epinephrine
 	name = "Epinephrine"
 	id = /datum/reagent/medicine/epinephrine
-	results = list(/datum/reagent/medicine/epinephrine = 3)
-	required_reagents = list(/datum/reagent/carbon = 1, /datum/reagent/oxygen = 1, /datum/reagent/consumable/sugar = 1)
+	results = list(/datum/reagent/medicine/epinephrine = 6)
+	required_reagents = list(/datum/reagent/acetone = 1, /datum/reagent/diethylamine = 1, /datum/reagent/phenol = 1, /datum/reagent/oxygen = 1, /datum/reagent/hydrogen = 1, /datum/reagent/chlorine = 1)
 
 /datum/chemical_reaction/strange_reagent
 	name = "Strange Reagent"
@@ -280,8 +280,9 @@
 /datum/chemical_reaction/bicaridine
 	name = "Bicaridine"
 	id = /datum/reagent/medicine/bicaridine
-	results = list(/datum/reagent/medicine/bicaridine = 2)
-	required_reagents = list(/datum/reagent/medicine/epinephrine = 1, /datum/reagent/carbon = 1)
+	results = list(/datum/reagent/medicine/bicaridine = 3)
+	required_reagents = list(/datum/reagent/carbon = 1, /datum/reagent/oxygen = 1, /datum/reagent/consumable/sugar = 1)
+
 
 /datum/chemical_reaction/kelotane
 	name = "Kelotane"
@@ -421,10 +422,16 @@
 	required_reagents = list(/datum/reagent/consumable/ethanol/salgam = 10 , /datum/reagent/consumable/ethanol/brocbrew = 10 , /datum/reagent/consumable/sunset = 10 , /datum/reagent/consumable/ethanol/yellowpulque = 10)
 
 /datum/chemical_reaction/drinkneutralization
-	name = "Neutralization reaction"
+	name = "Bitter Drink neutralization reaction"
 	id = "drink_neutralization"
 	results = list(/datum/reagent/water = 1)
-	required_reagents = list(/datum/reagent/medicine/bitter_drink = 1, /datum/reagent/medicine/healing_powder/poultice = 1)
+	required_reagents = list(/datum/reagent/medicine/bitter_drink = 1, /datum/reagent/medicine/healing_powder = 1)
+
+/datum/chemical_reaction/medxneutralization
+	name = "Med-X neutralization reaction"
+	id = "medx_neutralization"
+	results = list(/datum/reagent/water = 1)
+	required_reagents = list(/datum/reagent/medicine/medx = 1, /datum/reagent/medicine/super_stimpak = 1)
 
 /datum/chemical_reaction/rehab
 	name = "Rehab"

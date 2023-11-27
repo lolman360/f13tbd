@@ -17,7 +17,7 @@
 	toolspeed = 0.9
 	var/drill_delay = 7
 	var/drill_level = DRILL_BASIC
-	mech_flags = EXOSUIT_MODULE_WORKING | EXOSUIT_MODULE_COMBAT
+	mech_flags = EXOSUIT_MODULE_WORKING
 
 /obj/item/mecha_parts/mecha_equipment/drill/Initialize(mapload)
 	. = ..()
@@ -127,7 +127,7 @@
 		target.apply_damage(10, BRUTE, BODY_ZONE_CHEST, target.run_armor_check(target_part, "melee"))
 
 		//blood splatters
-		var/splatter_dir = get_dir(chassis, target)
+		var/splatter_dir = Get_Angle(chassis, target)
 		if(isalien(target))
 			new /obj/effect/temp_visual/dir_setting/bloodsplatter/xenosplatter(target.drop_location(), splatter_dir)
 		else

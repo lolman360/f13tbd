@@ -77,8 +77,8 @@
 /obj/item/ammo_box/magazine/m5mm
 	name = "Assault Rifle Magazine (5mm)"
 	icon_state = "r30"
-	caliber = "m5mm"
-	ammo_type = /obj/item/ammo_casing/m5mm
+	caliber = "a5mm"
+	ammo_type = /obj/item/ammo_casing/a5mm
 	max_ammo = 30
 	multiple_sprites = 2
 
@@ -143,18 +143,14 @@
 /obj/item/ammo_box/magazine/m473
 	name = "g11 magazine (4.73mm)"
 	icon_state = "473mm"
-	caliber = "473mm"
-	ammo_type = /obj/item/ammo_casing/caseless/g11
+	caliber = "a473"
+	ammo_type = /obj/item/ammo_casing/caseless/a473
 	max_ammo = 50
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/m473/explosive
 	name = "g11 magazine (4.73mm explosive)"
-	icon_state = "473mm"
-	caliber = "473mm"
-	ammo_type = /obj/item/ammo_casing/caseless/g11/explosive
-	max_ammo = 50
-	multiple_sprites = 2
+	ammo_type = /obj/item/ammo_casing/caseless/a473/explosive
 
 /obj/item/ammo_box/magazine/m473/empty
 	start_empty = 1

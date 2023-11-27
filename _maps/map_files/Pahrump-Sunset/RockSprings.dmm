@@ -6793,6 +6793,10 @@
 	icon_state = "plating"
 	},
 /area/f13/building)
+"gIJ" = (
+/obj/machinery/manned_turret/m2/unanchored,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "gJf" = (
 /mob/living/simple_animal/hostile/bloatfly,
 /turf/open/indestructible/ground/outside/dirt/harsh,
@@ -10386,6 +10390,7 @@
 /area/f13/wasteland/rocksprings)
 "kxp" = (
 /obj/machinery/workbench,
+/obj/item/book/granter/crafting_recipe/scav,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/building)
 "kxD" = (
@@ -11319,10 +11324,6 @@
 	color = "#A47449"
 	},
 /turf/open/floor/f13/wood,
-/area/f13/building)
-"lAF" = (
-/mob/living/simple_animal/bot/cleanbot,
-/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/building)
 "lAU" = (
 /obj/structure/flora/grass/wasteland,
@@ -12544,6 +12545,7 @@
 /obj/item/seeds/xander,
 /obj/item/seeds/poppy/broc,
 /obj/item/seeds/poppy/broc,
+/obj/item/seeds/ambrosia/gaia,
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/legion)
 "mIR" = (
@@ -14752,7 +14754,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/timeddoor/onetwozerominutes,
+/obj/structure/timeddoor/sixtyminute,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/building)
 "oMj" = (
@@ -15104,6 +15106,7 @@
 	dir = 1
 	},
 /obj/machinery/autolathe/constructionlathe,
+/obj/item/book/granter/crafting_recipe/scav,
 /turf/open/floor/plasteel/f13{
 	icon_state = "greenrustychess"
 	},
@@ -20145,7 +20148,7 @@
 	},
 /area/f13/wasteland/rocksprings)
 "tWO" = (
-/obj/structure/timeddoor/onetwozerominutes,
+/obj/structure/timeddoor/sixtyminute,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/building)
 "tWX" = (
@@ -24137,7 +24140,9 @@
 /turf/open/floor/wood/wood_worn/wood_worn_dark,
 /area/f13/wasteland/rocksprings)
 "xOs" = (
-/obj/machinery/msgterminal/legion,
+/obj/machinery/msgterminal/legion{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/legion)
 "xOG" = (
@@ -31070,7 +31075,7 @@ yko
 qWV
 hgP
 hgP
-onR
+jIp
 xAx
 hXy
 hXy
@@ -31328,7 +31333,7 @@ qWV
 hgP
 hgP
 jIp
-xAx
+dTT
 anP
 hXy
 hXy
@@ -31584,8 +31589,8 @@ nsp
 vTD
 hgP
 hgP
-jIp
-dTT
+hgP
+kTa
 hXy
 hXy
 paT
@@ -32098,7 +32103,7 @@ yko
 qWV
 hgP
 hgP
-hgP
+onR
 dTT
 hXy
 hXy
@@ -43174,7 +43179,7 @@ dnA
 hAL
 hDv
 hAL
-gtX
+gIJ
 gtX
 rFl
 jLa
@@ -72387,7 +72392,7 @@ pIm
 ifb
 bie
 vhd
-lAF
+vhd
 vSA
 uyG
 drm

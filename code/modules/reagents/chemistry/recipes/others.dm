@@ -742,7 +742,7 @@
 	name = "liquid arcade carpet"
 	id = /datum/reagent/carpet/arcade
 	results = list(/datum/reagent/carpet/arcade = 2)
-	required_reagents = list(/datum/reagent/carpet = 1, /datum/reagent/consumable/pwr_game = 1)
+	required_reagents = list(/datum/reagent/carpet = 1, /datum/reagent/consumable/nuka_cola = 1)
 
 /datum/chemical_reaction/carpet/blackred
 	name = "liquid red black carpet"
@@ -864,7 +864,7 @@
 	id = /datum/reagent/celugel
 	required_catalysts = list(/datum/reagent/lithium = 5, /datum/reagent/chlorine = 5)
 	results = list(/datum/reagent/celugel = 4)
-	required_reagents = list(/datum/reagent/cellulose = 1, /datum/reagent/diethylamine = 1, /datum/reagent/fermi/acidic_buffer = 0.5, /datum/reagent/acetone = 1, /datum/reagent/carbondioxide = 1) //not a super easy recipe as it replaces a hard-to-get chemical
+	required_reagents = list(/datum/reagent/cellulose = 1, /datum/reagent/diethylamine = 1, /datum/reagent/acetone = 1, /datum/reagent/carbondioxide = 1) //not a super easy recipe as it replaces a hard-to-get chemical
 	OptimalTempMin 		= 430
 	OptimalTempMax		= 520
 	ExplodeTemp			= 9999

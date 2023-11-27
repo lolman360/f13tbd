@@ -5,7 +5,7 @@
 	see_in_dark = 2
 	hud_possible = list(HEALTH_HUD,STATUS_HUD,ANTAG_HUD,NANITE_HUD,DIAG_NANITE_FULL_HUD,RAD_HUD,ONLINE_HUD)
 	pressure_resistance = 10
-	has_field_of_vision = TRUE
+	has_field_of_vision = FALSE
 	pass_flags_self = PASSMOB
 	typing_indicator_enabled = TRUE
 
@@ -82,7 +82,7 @@
 
 	var/mob_size = MOB_SIZE_HUMAN
 	var/mob_biotypes = MOB_ORGANIC
-	var/transpiration_efficiency = 1.1
+	var/transpiration_efficiency = 1
 	var/metabolism_efficiency = 1 //more or less efficiency to metabolize helpful/harmful reagents and regulate body temperature..
 	var/has_limbs = 0 //does the mob have distinct limbs?(arms,legs, chest,head)
 

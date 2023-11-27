@@ -2,6 +2,7 @@
 //PLEASE PUT CUSTOM ARMORS IN f13armor.dm. All power armors are found in f13armor.dm.
 
 //Raider
+
 /obj/item/clothing/suit/armor/f13/raider
 	name = "base raider armor"
 	desc = "for testing"
@@ -465,7 +466,7 @@
 /obj/item/clothing/suit/armor/f13/ncrarmor/mantle/reinforced/trenchraider
 	name = "NCR reinforced trench mantle vest"
 	desc = "A standard issue NCR Infantry vest that has had a portion of its ceramics replaced with shock-resistant plates."
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0, "wound" = 40)
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0, "wound" = 40)
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/labcoat
 	name = "NCR medical labcoat"
@@ -610,6 +611,14 @@
 	desc = "A cheap, standard issue teal canvas jacket issued to poor suckers who find themselves at the butt-end of the NCR's judiciary system."
 
 //Brotherhood of Steel (PA in f13armor.dm)
+
+/obj/item/clothing/suit/armor/f13/headscribecoat
+	name = "Head Scribe's field coat"
+	desc = "A thick coat with a fur inlay and soft armor padding, perfect for intimidating subordinates and captives alike."
+	icon_state = "hoccoat"
+	item_state = "hoccoat"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
 
 /obj/item/clothing/suit/armor/f13/headscribe
 	name = "brotherhood head scribe robe"
