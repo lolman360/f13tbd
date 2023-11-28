@@ -31,7 +31,6 @@
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/grease_gun)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
@@ -44,8 +43,8 @@
 	title = "Khan Smith"
 	flag = F13KHANSMITH
 	faction = FACTION_KHAN
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the smith, a mixture of an Electrician and Engineer through trial-and-error. Maintain the camp and assist the Senior Enforcer when possible."
 	enforces = "You have control over the forge, a valuable asset in maintaining your presence in the area."
 	supervisors = "your fellow Khans"
@@ -280,4 +279,3 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/empgrenade)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/xbow)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/cheaparrow)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
