@@ -540,7 +540,7 @@
 
 /obj/item/clothing/head/hooded/winterhood/centcom
 	icon_state = "winterhood_centcom"
-	armor = list("melee" = 25, "bullet" = 5, "laser" = 25, "energy" = 15, "bomb" = 20, "bio" = 5, "rad" = 0, "fire" = 15, "acid" = 5)
+	armor = list("melee" = 25, "bullet" = 5, "laser" = 25, "energy" = 10, "bomb" = 20, "bio" = 5, "rad" = 0, "fire" = 15, "acid" = 5)
 
 /obj/item/clothing/suit/hooded/wintercoat/captain
 	name = "captain's winter coat"

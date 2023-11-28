@@ -661,21 +661,21 @@
 	desc = "A combat armor set made by the Brotherhood of Steel, standard issue for all Knights. It bears a red stripe."
 	icon_state = "brotherhood_armor_knight"
 	item_state = "brotherhood_armor_knight"
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 55, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 55, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 20)
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/senior
 	name = "brotherhood senior knight armor"
 	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knights. It bears a silver stripe."
 	icon_state = "brotherhood_armor_senior"
 	item_state = "brotherhood_armor_senior"
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 60, "energy" = 25, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 60, "energy" = 25, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 20)
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/captain
 	name = "brotherhood head knight armor"
 	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Head Knights. It bears golden embroidery."
 	icon_state = "brotherhood_armor_captain"
 	item_state = "brotherhood_armor_captain"
-	armor = list("melee" = 55, "bullet" = 55, "laser" = 60, "energy" = 30, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 60, "energy" = 30, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 20)
 	slowdown = 0.15
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/initiate
@@ -926,7 +926,7 @@
 	icon_state = "usmc_riot_gear"
 	item_state = "usmc_riot_gear"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 10, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 20, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
 
 /obj/item/clothing/suit/armor/f13/usmcriot/Initialize(mapload) //HQ parts reinforcement
 	. = ..()
@@ -942,7 +942,8 @@
 	icon_state = "armor_enclave_officer"
 	item_state = "armor_enclave_officer"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 15, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 30, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 20) //equivalent to HK
+
 
 /obj/item/clothing/suit/armor/f13/enclavetrenchcoat/Initialize(mapload) //HQ parts reinforcement
 	. = ..()
@@ -1041,13 +1042,17 @@
 
 //Enclave/Remnants
 
-/obj/item/clothing/suit/armor/f13/combat/enclave
+/obj/item/clothing/suit/armor/f13/combat/mk2/enclave //its mk2 for salvaging purposes, mostly
 	name = "enclave combat armor"
 	desc = "An old set of pre-war combat armor, painted black."
 	icon_state = "enclave_new"
 	item_state = "enclave_new"
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 15, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 20)
+	slowdown = 0.12
 
+/obj/item/clothing/suit/armor/f13/combat/mk2/enclave/ComponentInitialize(mapload) //HQ parts reinforcement
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
 //Town
 
 /obj/item/clothing/suit/armor/f13/combat/sierra
