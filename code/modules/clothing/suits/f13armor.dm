@@ -1298,8 +1298,6 @@
 	icon_state = "dead_horses_armour"
 	item_state = "dead_horses_armour"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bulletbelt
-	armor = list("melee" = 35, "bullet" = 25, "laser" = 25, "energy" = 5, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10, "wound" = 10)
-	slowdown = 0.025
 
 /obj/item/clothing/suit/f13/tribal/heavy/deadhorses
 	name = "Dead Horses heavy armour"
@@ -1307,8 +1305,6 @@
 	icon_state = "dead_horses_armour_heavy"
 	item_state = "dead_horses_armour_heavy"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bulletbelt
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 30, "energy" = 10, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10, "wound" = 10)
-	slowdown = 0.05
 
 /obj/item/clothing/suit/f13/tribal/light/sorrows
 	name = "Sorrows armour"
