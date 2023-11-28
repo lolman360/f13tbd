@@ -83,8 +83,8 @@
 	title = "Khan Enforcer"
 	flag = F13KHAN
 	faction = FACTION_KHAN
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 5
+	spawn_positions = 5
 	description = "You are a Khan, a member of the local band that the Chief has sent to scout these lands. Listen to the Chemist, and assure you've a steady supply of caps for the Chief."
 	supervisors = "your fellow Khans"
 	selection_color = "#ff915e"
@@ -152,7 +152,7 @@
 /datum/outfit/loadout/soldier
 	name = "Heavy Enforcer"
 	belt = /obj/item/storage/backpack/spearquiver
-	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
+	r_hand = /obj/item/gun/ballistic/shotgun/trench
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/armored
 	head = /obj/item/clothing/head/helmet/f13/khan
 	backpack_contents = list(
