@@ -13896,9 +13896,6 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/east)
 "aXM" = (
-/obj/machinery/smoke_machine{
-	name = "generator mechanism"
-	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrustysolid"
 	},

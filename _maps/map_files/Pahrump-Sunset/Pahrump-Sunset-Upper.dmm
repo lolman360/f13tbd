@@ -9918,9 +9918,6 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/mall)
 "rlb" = (
-/obj/machinery/smoke_machine{
-	name = "generator mechanism"
-	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrustysolid"
 	},
