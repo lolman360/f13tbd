@@ -48367,7 +48367,6 @@
 /area/f13/wasteland/west)
 "pIH" = (
 /obj/structure/table/wood/poker,
-/obj/item/gun/ballistic/revolver/russian/soul,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "pJb" = (
