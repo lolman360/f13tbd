@@ -48,7 +48,7 @@
 	spawn_positions = 1
 	description = "You are the smith, a mixture of an Electrician and Engineer through trial-and-error. Maintain the camp and assist the Senior Enforcer when possible."
 	enforces = "You have control over the forge, a valuable asset in maintaining your presence in the area."
-	supervisors = "the Senior Enforcer"
+	supervisors = "your fellow Khans"
 	selection_color = "#ff915e"
 	req_admin_notify = 1
 	exp_type = EXP_TYPE_KHAN
@@ -65,8 +65,8 @@
 	title = "Khan Senior Enforcer"
 	flag = F13KHANSEN
 	faction = FACTION_KHAN
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are a Khan, atop being the senior of all within this camp. Maintain some manner of control and assure the Chemist doesn't blow their hands off."
 	supervisors = "the Senior Enforcer"
 	selection_color = "#ff915e"
@@ -84,10 +84,10 @@
 	title = "Khan Enforcer"
 	flag = F13KHAN
 	faction = FACTION_KHAN
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 3
+	spawn_positions = 3
 	description = "You are a Khan, a member of the local band that the Chief has sent to scout these lands. Listen to the Chemist, and assure you've a steady supply of caps for the Chief."
-	supervisors = "the Senior Enforcer"
+	supervisors = "your fellow Khans"
 	selection_color = "#ff915e"
 	exp_requirements = 0
 	exp_type = EXP_TYPE_WASTELAND
@@ -107,7 +107,7 @@
 	spawn_positions = 2
 	description = "You are a Chemist, one of the few Khans present in this camp that can produce those sweet, sweet chems. Keep them flowing and assure a supply of caps, so you can send them back to the Chief."
 	enforces = "You have control over the lab, a valuable asset in generating profit."
-	supervisors = "the Senior Enforcer"
+	supervisors = "your fellow Khans"
 	selection_color = "#ff915e"
 	req_admin_notify = 1
 	exp_requirements = 300
@@ -280,3 +280,4 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/empgrenade)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/xbow)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/cheaparrow)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
