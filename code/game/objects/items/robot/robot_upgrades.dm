@@ -84,7 +84,7 @@ as performing this in action() will cause the upgrade to end up in the borg inst
 /obj/item/borg/upgrade/vtec/action(mob/living/silicon/robot/R, user = usr)
 	. = ..()
 	if(.)
-		if(!R.cansprint)
+		if(/obj/item/borg/upgrade/vtec in R)
 			to_chat(R, "<span class='notice'>A VTEC unit is already installed!</span>")
 			to_chat(user, "<span class='notice'>There's no room for another VTEC unit!</span>")
 			return FALSE
@@ -92,13 +92,11 @@ as performing this in action() will cause the upgrade to end up in the borg inst
 		//R.speed = -2 // Gotta go fast.
 		//Citadel change - makes vtecs give an ability rather than reducing the borg's speed instantly
 		R.AddAbility(new/obj/effect/proc_holder/silicon/cyborg/vtecControl)
-		R.cansprint = 0
 
 /obj/item/borg/upgrade/vtec/deactivate(mob/living/silicon/robot/R, user = usr)
 	. = ..()
 	if (.)
 		R.speed = initial(R.speed)
-		R.cansprint = 1
 
 /obj/item/borg/upgrade/disablercooler
 	name = "cyborg rapid energy blaster cooling module"
