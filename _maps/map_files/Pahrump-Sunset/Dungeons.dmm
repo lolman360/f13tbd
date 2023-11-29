@@ -135,7 +135,7 @@
 	},
 /area/f13/ahs)
 "afJ" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /turf/open/floor/plasteel/barber{
 	icon_state = "platingdmg2"
 	},
@@ -1420,14 +1420,14 @@
 /area/f13/ahs)
 "bPT" = (
 /obj/effect/decal/remains/human,
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /turf/open/floor/plasteel/barber{
 	icon_state = "platingdmg2"
 	},
 /area/f13/bunker)
 "bQl" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/item/trash/f13/blamco_large,
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/glass,
@@ -1445,7 +1445,7 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "bRw" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/structure/reagent_dispensers/barrel/dangerous,
 /turf/open/floor/plating,
 /area/f13/bunker)
@@ -1505,7 +1505,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault)
 "bUo" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/structure/reagent_dispensers/barrel/old,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
@@ -3872,7 +3872,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "eER" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/structure/reagent_dispensers/barrel/dangerous,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
@@ -4491,7 +4491,7 @@
 	},
 /area/f13/bunker)
 "fxg" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /turf/open/floor/plasteel/barber{
 	icon_state = "plating"
 	},
@@ -6355,7 +6355,7 @@
 /turf/open/floor/plasteel,
 /area/f13/vault)
 "hJk" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/structure/reagent_dispensers/barrel/dangerous,
 /turf/open/floor/plasteel/barber{
 	icon_state = "platingdmg2"
@@ -7950,7 +7950,7 @@
 	},
 /area/f13/bunker)
 "jBt" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /turf/open/floor/plasteel/barber{
 	icon_state = "plating"
 	},
@@ -8181,7 +8181,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/f13/vault)
 "jPx" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/structure/closet,
 /turf/open/floor/plasteel/barber{
 	icon_state = "plating"
@@ -9429,7 +9429,7 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "lle" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/structure/reagent_dispensers/barrel/dangerous,
 /turf/open/floor/plasteel/barber{
 	icon_state = "plating"
@@ -10073,7 +10073,7 @@
 	},
 /area/f13/bunker)
 "lXK" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/structure/closet,
 /obj/effect/spawner/lootdrop/f13/cash_random_low,
 /turf/open/floor/plasteel/barber{
@@ -10452,7 +10452,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "mxC" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /turf/open/floor/plasteel/barber{
 	icon_state = "plating"
 	},
@@ -10705,7 +10705,7 @@
 /area/f13/city)
 "mOC" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/item/trash/can,
 /turf/open/indestructible/ground/outside/water,
 /area/f13/underground/cave)
@@ -10937,7 +10937,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2,
 /area/f13/radiation)
 "ndE" = (
@@ -11613,7 +11613,7 @@
 	},
 /area/f13/bunker)
 "nRY" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/effect/spawner/lootdrop/f13/medical/rnd/good,
 /turf/open/floor/plasteel/barber{
 	icon_state = "plating"
@@ -13730,7 +13730,7 @@
 /turf/open/floor/plasteel,
 /area/f13/vault)
 "qcw" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/structure/reagent_dispensers/barrel/old,
 /turf/open/floor/plating,
 /area/f13/bunker)
@@ -13812,7 +13812,7 @@
 	},
 /area/f13/vault)
 "qhH" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/floor/plating,
 /area/f13/bunker)
@@ -17658,7 +17658,7 @@
 	},
 /area/f13/bunker)
 "uOh" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/structure/closet/crate/solarpanel_small,
 /turf/open/floor/plasteel/barber{
 	icon_state = "plating"
@@ -19580,7 +19580,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/bunker)
 "wYa" = (
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
@@ -20229,7 +20229,7 @@
 /area/f13/ahs)
 "xSl" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
-/obj/effect/decal/cleanable/greenglow/radioactive
+/obj/effect/decal/cleanable/greenglow/radioactive,
 /obj/item/trash/candy,
 /turf/open/indestructible/ground/outside/water,
 /area/f13/underground/cave)
