@@ -759,7 +759,7 @@
 	desc = "Legends are told of the \"Ratslayer\", a custom-made souped-up varmint rifle with a sick paintjob. This is a pale imitation, made of chopped-up bits of other guns."
 	icon_state = "verminrifle"
 	item_state = "ratslayer"
-	fire_delay = 2
+	fire_delay = 1.5 //50% higher than service rifle
 	suppressed = 1
 	zoomable = TRUE
 	zoom_amt = 10
