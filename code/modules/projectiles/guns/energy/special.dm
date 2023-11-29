@@ -393,3 +393,93 @@
 
 /obj/item/gun/energy/gutsy_flamethrower/emp_act()
 	return
+
+
+/obj/item/stock_parts/cell/lasmusket
+	name = "lasmusket internal battery"
+	charge = 0
+	maxcharge = 1
+	start_charged = FALSE
+
+
+//Laser musket
+/obj/item/gun/energy/lasmusket
+	name = "laser musket"
+	desc = "In the wasteland, one must make do, and this weapon's wielder certainly does. Made from metal scraps, electronic parts, an old rifle stock and a bottle full of dreams, the Laser Musket is sure to stop anything in its tracks and make those raiders think twice."
+	icon = 'icons/fallout/objects/guns/energy.dmi'
+	icon_state = "lasmusket"
+	item_state = "lasmusket"
+	fire_delay = 15
+	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
+	dryfire_text = "*power failure*"
+	can_bayonet = TRUE
+	can_scope = TRUE
+	can_remove = FALSE
+	can_charge = FALSE
+	dead_cell = TRUE
+	knife_x_offset = 22
+	knife_y_offset = 20
+	bayonet_state = "bayonet"
+	scope_state = "scope_long"
+	scope_x_offset = 11
+	scope_y_offset = 14
+	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
+	cell_type = /obj/item/stock_parts/cell/lasmusket
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/hitscan/musket)
+	var/cranks = 0
+	var/cranking = FALSE
+	var/firing = FALSE
+	var/crank_time = 5 //time per crank in ds
+	var/pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
+	automatic_charge_overlays = FALSE
+	extra_damage = -16
+	extra_penetration = -0.1
+
+/obj/item/gun/energy/lasmusket/attack_self(mob/living/user)
+	if(cranking)
+		to_chat(user, "<span class = 'notice'>You are already cranking the [src]!</span>")
+	cranking = TRUE
+	to_chat(user, "<span class = 'notice'>You start cranking the [src].</span>")
+	while(do_after_advanced(user, crank_time, src, do_after_flags = DO_AFTER_DISALLOW_ACTIVE_ITEM_CHANGE))
+		to_chat(user, "You crank the thing") //debug
+		cranks++
+		playsound(src, pump_sound, 30, 1)
+		switch(cranks)
+			if(1)
+				cell.give(1)
+			if(2)
+				extra_damage = 0
+				extra_penetration = 0
+			if(3)
+				extra_damage = 5
+				extra_penetration = 0.05
+			if(4)
+				extra_damage = 10
+				extra_penetration = 0.1
+		if(firing)
+			break
+
+	to_chat(user, "<span class = 'notice'>You stop cranking the [src]. You cranked it for a total of [cranks/2] seconds!</span>")
+	cranks = 0
+	cell.use(1)
+	extra_damage = initial(extra_damage)
+	extra_penetration = initial(extra_penetration)
+	cranking = FALSE
+
+/obj/item/gun/energy/e_gun/nuclear/update_overlays()
+	. = ..()
+	switch(fail_tick)
+		if(1)
+			. += "[icon_state]_charge1"
+		if(2)
+			. += "[icon_state]_charge2"
+		if(3)
+			. += "[icon_state]_charge3"
+		if(4 to INFINITY)
+			. += "[icon_state]_charge4"
+
+/obj/item/gun/energy/lasmusket/do_fire()
+	firing = TRUE
+	..()
+	firing = FALSE

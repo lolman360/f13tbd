@@ -139,7 +139,7 @@
 	desc = "Should not exists. Bugreport."
 	icon_state = "laser"
 	item_state = "laser"
-	slowdown = 0.3
+	slowdown = 0.2
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	custom_materials = list(/datum/material/iron=2000)
@@ -207,7 +207,6 @@
 	icon_state = "wattz1000"
 	item_state = "laser-pistol"
 	fire_delay = 0
-	slowdown = 0.2
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT //Can dual wield, which makes up for the meh damage. Especially so with the Magneto.
 	slot_flags = ITEM_SLOT_BELT
@@ -257,7 +256,6 @@
 /obj/item/gun/energy/laser/pistol
 	name = "\improper AEP7 laser pistol"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light."
-	slowdown = 0.2
 	icon_state = "AEP7"
 	item_state = "laser-pistol"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -290,7 +288,6 @@
 /obj/item/gun/energy/laser/complianceregulator
 	name = "AEP5-CR Disabling Beam Pistol"
 	desc = "A laser pistol that has been modified for less-than-lethal work."
-	slowdown = 0.2
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
@@ -311,7 +308,6 @@
 //Solar Scorcher
 /obj/item/gun/energy/laser/solar
 	name = "\improper Solar Scorcher"
-	slowdown = 0.2
 	desc = "This modified AEP7 laser pistol takes its power from the sun, recharging slowly using stored solar energy. However, it cannot be recharged manually as a result."
 	icon_state = "solarscorcher"
 	item_state = "solarscorcher"
@@ -354,7 +350,6 @@
 /obj/item/gun/energy/laser/ultra_pistol
 	name = "\improper Ultracite laser pistol"
 	desc = "An ultracite enhanced energy-based laser gun that fires concentrated beams of light."
-	slowdown = 0.2
 	icon_state = "ultra_pistol"
 	item_state = "laser-pistol"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -378,7 +373,7 @@
 /obj/item/gun/energy/laser/wattz2k
 	name = "wattz 2000"
 	desc = "Wattz 2000 Laser Rifle. Uses micro fusion cells for more powerful lasers, and an extended barrel for additional range."
-	slowdown = 0.3
+	slowdown = 0.35
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
@@ -553,7 +548,6 @@
 //Alien Blaster
 /obj/item/gun/energy/laser/plasma/pistol/alien
 	name = "alien blaster"
-	slowdown = 0.2
 	item_state = "alienblaster"
 	icon_state = "alienblaster"
 	desc = "This weapon is unlike any other you've ever seen before, and appears to be made out of metals not usually found on Earth. It certainly packs a punch, though."

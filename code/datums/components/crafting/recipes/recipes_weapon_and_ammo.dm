@@ -444,9 +444,9 @@
 /datum/crafting_recipe/gun/plasmamusket
 	name = "Plasma musket"
 	result = /obj/item/gun/ballistic/rifle/hobo/plasmacaster
-	reqs = list(/obj/item/gun/ballistic/rifle/hobo/lasmusket = 1,
+	reqs = list(/obj/item/gun/energy/lasmusket = 1,
 				/obj/item/stack/crafting/electronicparts = 2,
-				/obj/item/advanced_crafting_components/conductors = 1)
+				/obj/item/trash/f13/electronic/toaster = 1)
 	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
 	time = 120
 	category = CAT_WEAPONRY
@@ -454,8 +454,8 @@
 
 /datum/crafting_recipe/gun/lasmusket
 	name = "Laser musket"
-	result = /obj/item/gun/ballistic/rifle/hobo/lasmusket
-	reqs = list(/obj/item/trash/f13/electronic/toaster = 1,
+	result = /obj/item/gun/energy/lasmusket
+	reqs = list(/obj/item/stack/crafting/electronicparts = 5,
 				/obj/item/gun/ballistic/revolver/hobo/piperifle = 1,
 				/obj/item/reagent_containers/food/drinks/bottle = 1,
 				/obj/item/stack/cable_coil = 3)
