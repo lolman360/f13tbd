@@ -300,22 +300,10 @@
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
 
-//plasma caster
-/obj/item/projectile/f13plasma/plasmacaster
-	name = "plasma bolt"
-	icon_state = "plasma_clot"
-	damage_type = BURN
-	damage = 25 //fucc you normies
-	armour_penetration = 0 //no AP, armor shouldnt have more than 20 resist against plasma unless its specialized
-	flag = "energy" //checks vs. energy protection
-	wound_bonus = 45 //being hit with plasma is horrific
-	eyeblur = 0
-	is_reflectable = TRUE
-	pixels_per_second =  TILES_TO_PIXELS(14)
-
 //Securitrons Beam
 /obj/item/projectile/beam/laser/pistol/ultraweak
 	damage = 15 //quantity over quality
+
 
 //Alrem's plasmacaster
 /obj/item/projectile/f13plasma/plasmacaster/arlem
@@ -493,22 +481,20 @@
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 30 //fucc you normies
+	damage = 24 //fucc you normies
 	armour_penetration = 0 //no AP, armor shouldnt have more than 20 resist against plasma unless its specialized
 	flag = "energy" //checks vs. energy protection
 	wound_bonus = 45 //being hit with plasma is horrific
 	eyeblur = 0
 	is_reflectable = TRUE
-	pixels_per_second =  TILES_TO_PIXELS(14)
+	pixels_per_second =  TILES_TO_PIXELS(20)
 
 /obj/item/projectile/f13plasma/caster
 	name = "caster bolt"
-	damage = 22
+	damage = 20 //rapid fire
 	wound_bonus = 35 //being hit with plasma is horrific
-	pixels_per_second =  TILES_TO_PIXELS(14)
-
 /obj/item/projectile/f13plasma/carbine //Plasma carbine
-	pixels_per_second = TILES_TO_PIXELS(10)
+	pixels_per_second = TILES_TO_PIXELS(15)
 
 /obj/item/projectile/f13plasma/repeater //Plasma repeater
 	name = "plasma stream"
@@ -521,7 +507,7 @@
 	icon_state = "plasma_clot"
 	damage_type = BURN
 	damage = 5
-	wound_bonus = 15
+	wound_bonus = 5
 	is_reflectable = FALSE
 
 /obj/item/projectile/f13plasma/repeater/mining/on_hit(atom/target)
@@ -531,13 +517,13 @@
 		M.gets_drilled(firer)
 
 /obj/item/projectile/f13plasma/pistol //Plasma pistol
-	damage = 25
+	damage = 20
 
 /obj/item/projectile/f13plasma/pistol/worn
-	damage = 22
+	damage = 18
 
 /obj/item/projectile/f13plasma/pistol/glock //Glock (streamlined plasma pistol)
-	damage = 27
+	damage = 22
 
 /obj/item/projectile/f13plasma/scatter //Multiplas, fires 3 shots, will melt you
 	damage = 25
