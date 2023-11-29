@@ -1084,7 +1084,6 @@ Discuss balance and documentation changes with Dragonfruits#1913 or forward them
 	gunsmith_one = TRUE
 	gunsmith_two = TRUE
 	gunsmith_three = TRUE
-	gunsmith_four = TRUE
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/stack/sheet/metal/twenty = 2,
@@ -1112,6 +1111,11 @@ Discuss balance and documentation changes with Dragonfruits#1913 or forward them
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/concussion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/xbow)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/cheaparrow)
+
+
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/receiver)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/assembly)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/alloys)
 
 
 
