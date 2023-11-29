@@ -493,7 +493,7 @@
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 22 //fucc you normies
+	damage = 30 //fucc you normies
 	armour_penetration = 0 //no AP, armor shouldnt have more than 20 resist against plasma unless its specialized
 	flag = "energy" //checks vs. energy protection
 	wound_bonus = 45 //being hit with plasma is horrific
@@ -501,15 +501,13 @@
 	is_reflectable = TRUE
 	pixels_per_second =  TILES_TO_PIXELS(14)
 
-/obj/item/projectile/plasmacarbine //Plasma carbine
-	name = "plasma bolt"
-	icon_state = "plasma_clot"
-	damage_type = BURN
-	damage = 35
-	flag = "energy" //checks vs. energy protection
-	wound_bonus = 0 //let's not make the carbine horrifying
-	eyeblur = 0
-	is_reflectable = TRUE
+/obj/item/projectile/f13plasma/caster
+	name = "caster bolt"
+	damage = 22
+	wound_bonus = 35 //being hit with plasma is horrific
+	pixels_per_second =  TILES_TO_PIXELS(14)
+
+/obj/item/projectile/f13plasma/carbine //Plasma carbine
 	pixels_per_second = TILES_TO_PIXELS(10)
 
 /obj/item/projectile/f13plasma/repeater //Plasma repeater
@@ -517,17 +515,13 @@
 	icon_state = "plasma_clot"
 	damage_type = BURN
 	damage = 35
-	flag = "energy" //checks vs. energy protection
-	eyeblur = 0
-	is_reflectable = FALSE
 
 /obj/item/projectile/f13plasma/repeater/mining
 	name = "mining plasma stream"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 35
-	flag = "energy"
-	eyeblur = 0
+	damage = 5
+	wound_bonus = 15
 	is_reflectable = FALSE
 
 /obj/item/projectile/f13plasma/repeater/mining/on_hit(atom/target)
@@ -537,13 +531,13 @@
 		M.gets_drilled(firer)
 
 /obj/item/projectile/f13plasma/pistol //Plasma pistol
-	damage = 18
+	damage = 25
 
 /obj/item/projectile/f13plasma/pistol/worn
-	damage = 16
+	damage = 22
 
 /obj/item/projectile/f13plasma/pistol/glock //Glock (streamlined plasma pistol)
-	damage = 20
+	damage = 27
 
 /obj/item/projectile/f13plasma/scatter //Multiplas, fires 3 shots, will melt you
 	damage = 25
@@ -665,19 +659,6 @@
 	name = "laser bolt"
 	damage = 40
 	armour_penetration = 0.6
-
-/obj/item/projectile/casterplasma //FNV plasma caster
-	name = "plasma bolt"
-	icon_state = "plasma_clot"
-	damage_type = BURN
-	damage = 26 //fucc you normies
-	armour_penetration = 0 //no AP, armor shouldnt have more than 20 resist against plasma unless its specialized
-	flag = "energy" //checks vs. energy protection
-	wound_bonus = 45 //being hit with plasma is horrific
-	eyeblur = 0
-	is_reflectable = TRUE
-	pixels_per_second =  TILES_TO_PIXELS(16) //same as 40mm grenade
-
 
 
 // BETA // Obsolete

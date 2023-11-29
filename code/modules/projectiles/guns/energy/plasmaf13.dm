@@ -6,7 +6,7 @@
 //Plasma pistol
 /obj/item/gun/energy/laser/plasma/pistol
 	name ="plasma pistol"
-	slowdown = 0.1
+	slowdown = 0
 	armour_penetration = 0.02
 	item_state = "plasma-pistol"
 	icon_state = "plasma-pistol"
@@ -21,7 +21,7 @@
 //BoS knight craftable plasma pistol
 /obj/item/gun/energy/laser/plasma/pistol/light
 	name = "lightweight plasma pistol"
-	slowdown = 0.1
+	slowdown = 0
 	icon_state = "light-plasma-pistol"
 	desc = "A lightweight modification of the common REPCONN-built plasma pistol. Fires heavy low penetration plasma clots at a slower rate than the regular design due to reduced cooling."
 	fire_delay = 5
@@ -55,7 +55,7 @@
 	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma. Powered by a small energy cell."
 	item_state = "plasma-pistol"
 	icon_state = "glock86"
-	slowdown = 0.1
+	slowdown = 0
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_MEDIUM
 	slot_flags = ITEM_SLOT_BELT
@@ -78,7 +78,7 @@
 	name ="plasma rifle"
 	item_state = "plasma"
 	icon_state = "plasma"
-	slowdown = 0.65 //this is one of the worst slowdowns in the game
+	slowdown = 0.1
 	fire_delay = 5.2
 	desc = "A miniaturized plasma caster that fires bolts of magnetically accelerated toroidal plasma towards an unlucky target."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
@@ -143,6 +143,7 @@
 	force = 20
 	burst_size = 5
 	burst_shot_delay = 0.5
+	slowdown = 0 //why tf do these have slowdown its a melee weapon
 	fire_delay = 10
 	scope_y_offset = 16
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
@@ -221,7 +222,7 @@
 		return FALSE
 
 //FNV plasma caster
-//High damage, fast rate of fire,10rnd capacity
+//High damage, fast rate of fire, 25rnd capacity, full auto
 //very heavy
 //deliberately OP
 /obj/item/gun/energy/laser/plasma/caster
@@ -241,7 +242,10 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	weapon_weight = WEAPON_LIGHT
+	slowdown = 0.4
+	automatic = TRUE
 	fire_delay = 3 //yes, it is a fast weapon
+	autofire_shot_delay = 3
 	var/twohands = FALSE
 
 /obj/item/gun/energy/laser/plasma/caster/ComponentInitialize()
