@@ -1568,9 +1568,7 @@
 	},
 /area/f13/ncr)
 "brf" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo8"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/floor/mineral/uranium{
 	icon_state = "plating_rust";
 	name = "corroded metal floor covered in goo";
@@ -1953,9 +1951,7 @@
 	},
 /area/f13/ncr)
 "bMb" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo10"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plating/rust,
 /area/f13/caves)
@@ -3476,9 +3472,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
 "dhl" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo8"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 1;
 	icon_state = "outerbordercorner"
@@ -5561,9 +5555,7 @@
 /turf/open/floor/wood/wood_common,
 /area/f13/city)
 "flZ" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo8"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalrightborderleft0"
 	},
@@ -6103,9 +6095,7 @@
 	},
 /area/f13/wasteland/warren)
 "fHR" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo12"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft0"
 	},
@@ -8778,9 +8768,7 @@
 /area/f13/wasteland/warren)
 "ijK" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo10"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalrightborderleft0"
 	},
@@ -13782,9 +13770,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/warren)
 "naZ" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo10"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain2"
 	},
@@ -14333,9 +14319,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/ncr)
 "nBY" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo10"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/floor/plasteel/dark,
 /area/f13/caves)
 "nCF" = (
@@ -15472,9 +15456,7 @@
 /area/f13/city)
 "oME" = (
 /obj/structure/table/optable,
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo5"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /obj/machinery/light/fo13colored/Aqua{
 	desc = "A lighting fixture with cold blue lighting.";
 	dir = 1;
@@ -20695,9 +20677,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/warren)
 "tGj" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo5"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/floor/mineral/uranium{
 	icon_state = "plating_rust";
 	name = "corroded metal floor covered in goo";
@@ -21023,9 +21003,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city)
 "tRq" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo12"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/floor/mineral/uranium{
 	icon_state = "plating_rust";
 	name = "corroded metal floor covered in goo";
@@ -24627,9 +24605,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess/redchess2,
 /area/f13/city)
 "wWL" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo5"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/floor/plasteel/dark,
 /area/f13/caves)
 "wXr" = (
@@ -25336,9 +25312,7 @@
 	},
 /area/f13/wasteland/warren)
 "xzv" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo12"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /obj/machinery/iv_drip,
 /turf/open/floor/f13,
 /area/f13/city)

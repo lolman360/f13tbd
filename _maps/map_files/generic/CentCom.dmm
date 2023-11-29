@@ -9005,9 +9005,7 @@
 /turf/open/indestructible/binary,
 /area/fabric_of_reality)
 "Qp" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo10"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /obj/item/twohanded/sledgehammer/simple,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/centcom/evac)

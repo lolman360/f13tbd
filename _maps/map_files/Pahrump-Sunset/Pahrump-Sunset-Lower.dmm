@@ -1325,9 +1325,7 @@
 	},
 /area/f13/tunnel/bighorn)
 "bAg" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo10"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /obj/effect/spawner/lootdrop/f13/armor/tier4,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
@@ -1978,21 +1976,15 @@
 	},
 /area/f13/clinic)
 "bIQ" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo5"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
 "bIS" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo12"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
 "bIT" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo8"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
 "bIV" = (
@@ -2084,9 +2076,7 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
 "bJj" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo10"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
 "bJk" = (
@@ -2300,9 +2290,7 @@
 "bJR" = (
 /obj/machinery/light/small,
 /obj/structure/window/spawner/east,
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo5"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
 "bJS" = (
@@ -2748,9 +2736,7 @@
 /area/f13/tunnel)
 "bLq" = (
 /obj/structure/reagent_dispensers/barrel/two,
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo8"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "bLu" = (
@@ -2838,9 +2824,7 @@
 /turf/closed/wall/r_wall/f13/vault,
 /area/f13/bunker)
 "bLP" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo5"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "bLQ" = (
@@ -2980,9 +2964,7 @@
 /area/f13/tunnel)
 "bMr" = (
 /obj/structure/reagent_dispensers/barrel/four,
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo5"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "bMs" = (
@@ -3096,9 +3078,7 @@
 /area/f13/clinic)
 "bMK" = (
 /obj/structure/reagent_dispensers/barrel/three,
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo8"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "bML" = (
@@ -3252,9 +3232,7 @@
 	},
 /area/f13/clinic)
 "bNm" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo10"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "bNn" = (
@@ -6264,9 +6242,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/f13/building/museum)
 "dFm" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo8"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "dFM" = (
@@ -6315,9 +6291,7 @@
 	},
 /area/f13/tunnel)
 "dLk" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo12"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
 "dLI" = (
@@ -6822,9 +6796,7 @@
 	},
 /area/f13/bunker)
 "eCq" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo12"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
 	},
@@ -9949,9 +9921,7 @@
 	},
 /area/f13/tunnel)
 "kUL" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo10"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
 "kVl" = (
@@ -13192,9 +13162,7 @@
 /obj/machinery/light/broken{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo10"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
 	},
@@ -14398,9 +14366,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/building/museum)
 "toy" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo5"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
 "tpc" = (
@@ -15592,9 +15558,7 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/brotherhood/reactor)
 "vFL" = (
-/obj/effect/decal/cleanable/greenglow/radioactive{
-	icon_state = "goo12"
-	},
+/obj/effect/decal/cleanable/greenglow/radioactive
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "vGl" = (

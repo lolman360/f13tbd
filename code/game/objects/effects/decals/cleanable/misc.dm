@@ -101,11 +101,9 @@
 /obj/effect/decal/cleanable/greenglow/radioactive
 	name = "glowing goo"
 	desc = "Jeez. I hope that's not for lunch."
-	light_power = 1
-	light_range = 2
-	light_color = LIGHT_COLOR_GREEN
-	icon_state = "greenglow"
-	beauty = -300
+	light_power = 3
+	light_range = 3
+	beauty = -450
 	var/range = 2
 	var/intensity = 20
 
