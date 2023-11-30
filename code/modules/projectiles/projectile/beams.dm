@@ -487,6 +487,8 @@
 	wound_bonus = 45 //being hit with plasma is horrific
 	eyeblur = 0
 	is_reflectable = TRUE
+	supereffective_faction = list("hostile", "ant", "ghoul", "cazador", "raider", "gecko", "radscorpion")
+	supereffective_damage = 16
 	pixels_per_second =  TILES_TO_PIXELS(20)
 
 /obj/item/projectile/f13plasma/caster
