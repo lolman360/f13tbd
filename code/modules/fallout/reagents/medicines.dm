@@ -958,10 +958,12 @@
 										  "<span class='notice'>You feel the catastrophic burns on your [affected_limb_name] rapidly regenerate.</span>")
 					else if (iter_wound.wound_type == WOUND_PIERCE)
 						iter_wound.blood_flow -= clot_rate
+						iter_wound.replace_wound(/datum/wound/pierce/severe)
 						M.visible_message("<span class='notice'>The bleeding hole in [M]'s [affected_limb_name] rapidly fills with fresh tissue!</span>", \
 										  "<span class='notice'>You feel the cavity in your [affected_limb_name] rapidly weaving back together.</span>")
 					else
 						iter_wound.blood_flow -= clot_rate
+						iter_wound.replace_wound(/datum/wound/slash/severe)
 						M.visible_message("<span class='notice'>The deep gashes on [M]'s [affected_limb_name] rapidly close up!</span>", \
 										  "<span class='notice'>You feel the deep gashes on your [affected_limb_name] rapidly close up.</span>")
 				if (WOUND_SEVERITY_SEVERE)
@@ -975,10 +977,12 @@
 										  "<span class='notice'>You feel the burns on your [affected_limb_name] scar over.</span>")
 					else if (iter_wound.wound_type == WOUND_PIERCE)
 						iter_wound.blood_flow -= clot_rate
+						iter_wound.replace_wound(/datum/wound/pierce/moderate)
 						M.visible_message("<span class='notice'>The puncture wound on [M]'s [affected_limb_name] quickly shrinks!</span>", \
 										  "<span class='notice'>You feel the puncture wound on your [affected_limb_name] quickly shrinking.</span>")
 					else
 						iter_wound.blood_flow -= clot_rate
+						iter_wound.replace_wound(/datum/wound/slash/moderate)
 						M.visible_message("<span class='notice'>The large cuts on [M]'s [affected_limb_name] quickly mend!</span>", \
 										  "<span class='notice'>You feel the large cuts on your [affected_limb_name] quickly mending.</span>")
 				if (WOUND_SEVERITY_MODERATE)
