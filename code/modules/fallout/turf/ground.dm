@@ -316,7 +316,7 @@
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
 //	step_sounds = list("human" = "erikafootsteps")
 
-/turf/open/indestructible/ground/outside/ruins/ex_act(severity, target)
+/*/turf/open/indestructible/ground/outside/ruins/ex_act(severity, target)
 	contents_explosion(severity, target)
 	switch(severity)
 		if(4)
@@ -329,7 +329,7 @@
 			if(prob(50))
 				ChangeTurf(baseturfs)
 		if(1)
-			ChangeTurf(baseturfs)
+			ChangeTurf(baseturfs)*/
 
 /turf/open/indestructible/ground/outside/wood
 	name = "\proper wood planks"
@@ -387,7 +387,7 @@
 	if(istype(AM, /mob/living))
 		var/mob/living/L = AM
 		L.update_water()
-		L.apply_effect(2, EFFECT_IRRADIATE, 0)
+		L.apply_damage(2, RADIATION)
 		if(L.check_submerged() <= 0)
 			return
 		if(!istype(oldloc, /turf/open/indestructible/ground/outside/water))
@@ -399,7 +399,7 @@
 	if(istype(AM, /mob/living))
 		var/mob/living/L = AM
 		L.update_water()
-		L.apply_effect(2, EFFECT_IRRADIATE, 0)
+		L.apply_damage(2, RADIATION)
 		if(L.check_submerged() <= 0)
 			return
 		if(!istype(newloc, /turf/open/indestructible/ground/outside/water))

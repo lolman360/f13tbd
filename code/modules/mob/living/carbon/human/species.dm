@@ -10,7 +10,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/default_color = "#FFFFFF"	// if alien colors are disabled, this is the color that will be used by that race
 
 	var/sexes = 1 // whether or not the race has sexual characteristics. at the moment this is only 0 for skeletons and shadows
-	var/has_field_of_vision = TRUE
+	var/has_field_of_vision = FALSE
 
 	//Species Icon Drawing Offsets - Pixel X, Pixel Y, Aka X = Horizontal and Y = Vertical, from bottom left corner
 	var/list/offset_features = list(
@@ -62,6 +62,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/coldmod = 1		// multiplier for cold damage
 	var/heatmod = 1		// multiplier for heat damage
 	var/stunmod = 1		// multiplier for stun duration
+	var/radmod = 1		// multiplier for radiation accumulation
 	var/punchdamagelow = 1       //lowest possible punch damage. if this is set to 0, punches will always miss
 	var/punchdamagehigh = 10      //highest possible punch damage
 	var/punchstunthreshold = 10//damage at which punches from this race will stun //yes it should be to the attacked race but it's not useful that way even if it's logical
@@ -1303,31 +1304,24 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			H.overeatduration -= 2 //doubled the unfat rate
 
 	//THIRST//
-	if(H.water > THIRST_LEVEL_LIGHT)
-		if(H.transpiration_efficiency != 1.1)
-			to_chat(H, span_notice("You are no longer thirsty."))
-		H.transpiration_efficiency = 1.1
-	else if(H.water > THIRST_LEVEL_MIDDLE) //LITLE THIRST
-		if(H.transpiration_efficiency != 1)
-			to_chat(H, span_notice("Your mouth is incredibly dry."))
-		H.transpiration_efficiency = 1
-	else if(H.water > THIRST_LEVEL_HARD) //MIDDLE THIRST
-		if(H.transpiration_efficiency != 0.9)
-			to_chat(H, span_warning("You are very thirsty, find water."))
-		H.transpiration_efficiency = 0.9
-	else if(H.water > THIRST_LEVEL_DEADLY) //HARD THIRST
-		if(H.transpiration_efficiency != 0.6)
-			to_chat(H, span_danger("You are very dehydrated, find water immediately or you will perish."))
-		H.transpiration_efficiency = 0.6
-		if(prob(10))//Minor annoyance, depending on luck.
-			H.adjustStaminaLoss(25)
-	else
-		if(H.transpiration_efficiency != 0.1)
-			to_chat(H, span_userdanger("You are extremely dehydrated, death is upon you. You must find water."))
-		H.adjustOxyLoss(15)//No longer minor.
-		H.transpiration_efficiency = 0.1
-		if(prob(10))
-			H.adjustStaminaLoss(50)
+	if(H.water > THIRST_LEVEL_LIGHT)		//NO THIRST
+		if(H.transpiration_efficiency != 0.07)
+			to_chat(H, span_notice("You feel refreshed!"))
+			H.transpiration_efficiency = 0.07				//24 minutes or 1 in-game day to lose 200 water.
+	else if(H.water > THIRST_LEVEL_MIDDLE) 	//LITLE THIRST
+		if(H.transpiration_efficiency != 0.2)
+			to_chat(H, span_notice("Your mouth feels a little dry. You could use a sip of water."))
+			H.transpiration_efficiency = 0.2				//24 minutes or 1 in-game day to lose 300 water.
+	else if(H.water > THIRST_LEVEL_HARD) 	//MIDDLE THIRST
+		if(H.transpiration_efficiency != 0.07)
+			to_chat(H, span_warning("Your throat feels like sandpaper. You could use a glass of water."))
+			H.transpiration_efficiency = 0.07				//24 minutes or 1 in-game day to lose 100 water.
+	else 									//HARD THIRST
+		if(H.transpiration_efficiency != 0.05)
+			H.transpiration_efficiency = 0.05				//24 minutes or 1 in-game day to lose 75 water.
+			to_chat(H, span_warning("You feel dehydrated and lightheaded. You should really drink some water."))
+			if(prob(10))//Minor annoyance, depending on luck.
+				H.adjustStaminaLoss(25)
 
 	//metabolism change
 	if(H.nutrition > NUTRITION_LEVEL_FAT) //Overweight
@@ -1399,47 +1393,45 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		if (THIRST_LEVEL_HARD to THIRST_LEVEL_MIDDLE)
 			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "thirst", /datum/mood_event/nutrition/thirsty2)
 			H.throw_alert("thirst", /obj/screen/alert/thirst2)
-		if (THIRST_LEVEL_DEADLY to THIRST_LEVEL_HARD)
+		else
 			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "thirst", /datum/mood_event/nutrition/thirsty3)
 			H.throw_alert("thirst", /obj/screen/alert/thirst3)
-		if(0 to THIRST_LEVEL_DEADLY)
-			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "thirst", /datum/mood_event/nutrition/thirsty4)
-			H.throw_alert("thirst", /obj/screen/alert/thirst4)
 
 /datum/species/proc/update_health_hud(mob/living/carbon/human/H)
 	return 0
 
 /datum/species/proc/handle_mutations_and_radiation(mob/living/carbon/human/H)
 	. = FALSE
-	var/radiation = H.radiation
+	if(H.radloss < 0)
+		H.radloss = 0
 	if(HAS_TRAIT(H, TRAIT_RADIMMUNE))
 		return TRUE
 	if(HAS_TRAIT(H, TRAIT_FEV) || HAS_TRAIT(H, TRAIT_FEVII)) //FEV Slowdown based on rads
-		switch(radiation)
+		switch(H.radloss)
 			if(1000 to 2000)
 				H.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = 1)
 			if(2000 to 3000)
 				H.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = 1.5)
 			if(3000 to INFINITY)
-				H.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = 2.5)	
+				H.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = 2.5)
 
-	if(radiation > RAD_MOB_KNOCKDOWN && prob(RAD_MOB_KNOCKDOWN_PROB))
+	if(H.radloss > RAD_MOB_KNOCKDOWN && prob(RAD_MOB_KNOCKDOWN_PROB))
 		if(CHECK_MOBILITY(H, MOBILITY_STAND))
 			H.emote("collapse")
 		H.DefaultCombatKnockdown(RAD_MOB_KNOCKDOWN_AMOUNT)
 		to_chat(H, "<span class='danger'>You feel weak.</span>")
 
-	if(radiation > RAD_MOB_VOMIT && prob(RAD_MOB_VOMIT_PROB))
+	if(H.radloss > RAD_MOB_VOMIT && prob(RAD_MOB_VOMIT_PROB))
 		H.vomit(10, TRUE)
 
-	if(radiation > RAD_MOB_MUTATE)
+	if(H.radloss > RAD_MOB_MUTATE)
 		if(prob(1))
 			to_chat(H, "<span class='danger'>You mutate!</span>")
 			H.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
 			H.emote("gasp")
 			H.domutcheck()
 
-	if(radiation > RAD_MOB_HAIRLOSS)
+	if(H.radloss > RAD_MOB_HAIRLOSS)
 		if(prob(15) && !(H.hair_style == "Bald") && (HAIR in species_traits))
 			to_chat(H, "<span class='danger'>Your hair starts to fall out in clumps...</span>")
 			addtimer(CALLBACK(src, .proc/go_bald, H), 50)
@@ -2090,6 +2082,9 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		if(BRAIN)
 			var/damage_amount = forced ? damage : damage * hit_percent * H.physiology.brain_mod
 			H.adjustOrganLoss(ORGAN_SLOT_BRAIN, damage_amount)
+		if(RADIATION)
+			var/damage_amount = forced ? damage : damage * hit_percent * radmod * H.physiology.rad_mod
+			H.adjustRadLoss(damage_amount)
 	return 1
 
 /datum/species/proc/on_hit(obj/item/projectile/P, mob/living/carbon/human/H)
@@ -2306,8 +2301,10 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			return
 		if(thermal_protection >= FIRE_SUIT_MAX_TEMP_PROTECT && !no_protection)
 			H.adjust_bodytemperature(11)
+			H.take_overall_damage(burn = H.fire_stacks * 0.25)
 		else
 			H.adjust_bodytemperature(BODYTEMP_HEATING_MAX + (H.fire_stacks * 12))
+			H.take_overall_damage(burn = H.fire_stacks * 0.5)
 			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "on_fire", /datum/mood_event/on_fire)
 
 /datum/species/proc/CanIgniteMob(mob/living/carbon/human/H)

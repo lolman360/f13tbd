@@ -10,6 +10,7 @@
 /obj/item/clothing/shoes/f13/enclave/serviceboots
 	name = "enclave service boots"
 	desc = "Tall shiny boots with kevlar layers."
+	clothing_flags = NOSLIP
 	icon_state = "boots_enclave"
 	item_state = "boots_enclave"
 
@@ -96,11 +97,25 @@
 	icon_state = "erin_boot"
 	item_state = "erin_boot"
 
+/obj/item/clothing/shoes/f13/military/oldserviceboots
+	name = "old service boots"
+	desc = "Tall kevlar boots, visibly weathered and worn-down."
+	icon_state = "boots_enclave"
+	item_state = "boots_enclave"
+
 /obj/item/clothing/shoes/f13/military/ncr
 	name = "patrol boots"
 	desc = "A pair of standard issue brown boots, with a puttee."
 	icon_state = "ncr_boots"
 	item_state = "ncr"
+
+/obj/item/clothing/shoes/f13/military/ncr/sturdy
+	name = "sturdy patrol boots"
+	desc = "A pair of standard issue brown boots that have been customized with a steel toe cap and grippy soles."
+	icon_state = "ncrsturdy"
+	item_state = "ncrsturdy"
+	clothing_flags = NOSLIP
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
 
 /obj/item/clothing/shoes/f13/military/ncr_officer_boots
 	name = "officer boots"
@@ -146,6 +161,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/shoe.dmi'
 	icon_state = "legion_war"
 	item_state = "legion_war"
+	clothing_flags = NOSLIP
 	armor = list("melee" = 20, "bullet" = 20, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
 
 /obj/item/clothing/shoes/f13/military/legate
@@ -167,8 +183,19 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	icon_state = "khan_boots"
 	item_state = "khan_boots"
-	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
+	armor = list(melee = 10, bullet = 10, laser = 5, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 	var/boottoggled = FALSE
+
+/obj/item/clothing/shoes/f13/military/khanwar
+	name = "Khan raiding boots"
+	desc = "A pair of khan boots reinforced with even more plating."
+	icon = 'icons/fallout/clothing/khans.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
+	icon_state = "khan_warboots"
+	item_state = "khan_warboots"
+	clothing_flags = NOSLIP
+	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
+
 
 /obj/item/clothing/shoes/f13/military/khan/Goji
 	name = "steel-tipped Snakeskin Loafers"

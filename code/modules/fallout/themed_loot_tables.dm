@@ -316,7 +316,7 @@
 		/obj/effect/spawner/bundle/f13/needler = 10,
 		/obj/item/gun/energy/laser/rcw = 10,
 		/obj/item/gun/ballistic/automatic/m72 =10,
-		/obj/item/melee/powerfist/f13/moleminer = 10,
+		/obj/item/melee/f13powerfist/moleminer = 10,
 		/obj/item/melee/transforming/energy/axe/protonaxe = 10,
 		/obj/item/gun/ballistic/revolver/ballisticfist = 5,
 		)
@@ -369,7 +369,7 @@
 		/obj/item/ammo_box/c4570box = 25,
 		/obj/item/ammo_box/m14mm = 15,
 		/obj/item/stock_parts/cell/ammo/ec = 12,
-		/obj/item/ammo_box/m473 = 10,
+		/obj/item/ammo_box/a473 = 10,
 		/obj/item/ammo_box/magazine/automag = 10,
 		/obj/item/stock_parts/cell/ammo/mfc = 10,
 		/obj/item/ammo_box/magazine/m22smg = 9,

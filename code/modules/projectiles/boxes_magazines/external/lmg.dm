@@ -30,7 +30,7 @@
 	icon_state = "sniper_mag"
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = "a762"
-	max_ammo = 7
+	max_ammo = 10
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/w308/empty
@@ -51,8 +51,8 @@
 /obj/item/ammo_box/magazine/cz53
 	name = "ammo box (5mm)"
 	icon_state = "cz53"
-	ammo_type = /obj/item/ammo_casing/m5mm
-	caliber = "m5mm"
+	ammo_type = /obj/item/ammo_casing/a5mm
+	caliber = "a5mm"
 	max_ammo = 240
 	multiple_sprites = 2
 
@@ -62,8 +62,8 @@
 /obj/item/ammo_box/magazine/vindic
 	name = "ammo box (4.7mm)"
 	icon_state = "cz53"
-	ammo_type = /obj/item/ammo_casing/caseless/g11
-	caliber = "473mm"
+	ammo_type = /obj/item/ammo_casing/caseless/a473
+	caliber = "a473"
 	max_ammo = 240
 	multiple_sprites = 2
 
@@ -85,7 +85,7 @@
 	name = "ammo belt (.308)"
 	icon_state = "762belt"
 	ammo_type = /obj/item/ammo_casing/a762/sport
-	max_ammo = 80
+	max_ammo = 60
 	caliber = "a762"
 
 /obj/item/ammo_box/magazine/mm762/empty

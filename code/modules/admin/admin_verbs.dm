@@ -11,6 +11,8 @@ GLOBAL_PROTECT(admin_verbs_default)
 	/client/proc/investigate_show,		/*various admintools for investigation. Such as a singulo grief-log*/
 	/client/proc/debug_variables,		/*allows us to -see- the variables of any instance in the game. +VAREDIT needed to modify*/
 	/client/proc/toggleprayers,
+	/client/proc/togglecommcentermsg,
+	/client/proc/togglecommcentersound,
 	/client/proc/toggleadminhelpsound,
 	/client/proc/debugstatpanel,
 	)
@@ -275,6 +277,8 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 			add_verb(src, /client/proc/togglebuildmodeself)
 		if(rights & R_ADMIN)
 			add_verb(src, GLOB.admin_verbs_admin)
+		if(rights & R_ASAY)
+			add_verb(src, /client/proc/cmd_admin_say)
 		if(rights & R_BAN)
 			add_verb(src, GLOB.admin_verbs_ban)
 		if(rights & R_FUN)

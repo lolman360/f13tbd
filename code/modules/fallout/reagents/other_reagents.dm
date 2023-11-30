@@ -40,7 +40,7 @@
 	. = ..()
 	if(myseed && chems.has_reagent(src.type, 1))
 		mytray.adjustHealth(-round(chems.get_reagent_amount(src.type) * 0.025))
-		myseed.adjust_instability(round(chems.get_reagent_amount(src.type) * 0.3))
+		myseed.adjust_instability(round(chems.get_reagent_amount(src.type) * 0.9))
 
 // Enduro Grow Tribal Edition
 /datum/reagent/fortifying_compost
@@ -49,14 +49,14 @@
 	reagent_state = "LIQUID"
 	color = "#AD462C"
 	taste_description = "earthy rot"
-	
+
 // Making Enduro Grow Tribal edition
 /datum/chemical_reaction/fortifying_compost
 	id = /datum/reagent/fortifying_compost
 	results = list(/datum/reagent/fortifying_compost = 3)
 	required_reagents = list(/datum/reagent/compost = 1, /datum/reagent/consumable/yuccajuice = 1, /datum/reagent/consumable/tato_juice = 1)
 	mix_message = "The compost emits an earthy armora"
-	
+
 //If used on trays
 /datum/reagent/fortifying_compost/on_hydroponics_apply(obj/item/seeds/myseed, datum/reagents/chems, obj/machinery/hydroponics/mytray)
 	. = ..()
@@ -77,13 +77,13 @@
 /datum/chemical_reaction/alacritous_compost
 	id = /datum/reagent/alacritous_compost
 	results = list(/datum/reagent/alacritous_compost = 3)
-	required_reagents = list(/datum/reagent/ash = 1, /datum/reagent/consumable/ethanol/pungajuice = 1, /datum/reagent/compost = 1)
+	required_reagents = list(/datum/reagent/ash = 1, /datum/reagent/consumable/pungajuice = 1, /datum/reagent/compost = 1)
 	mix_message = "The compost starts smelling like manure"
 
 // If added to tray
 /datum/reagent/alacritous_compost/on_hydroponics_apply(obj/item/seeds/myseed, datum/reagents/chems, obj/machinery/hydroponics/mytray)
 	. = ..()
-	if(chems.has_reagent(src.type, 1))	
+	if(chems.has_reagent(src.type, 1))
 		var/acompost = chems.get_reagent_amount(src.type)
 		if(myseed)
 			myseed.adjust_production(-round(acompost/8)-prob(acompost%10))
@@ -104,7 +104,7 @@
 	results = list(/datum/reagent/stabilizing_compost = 3)
 	required_reagents = list(/datum/reagent/compost = 1, /datum/reagent/consumable/honey = 1, /datum/reagent/consumable/milk = 1)
 	mix_message= "A sweet smell comes over the compost"
-	
+
 // If added to tray
 /datum/reagent/stabilizing_compost/on_hydroponics_apply(obj/item/seeds/myseed, datum/reagents/chems, obj/machinery/hydroponics/mytray)
 	. = ..()

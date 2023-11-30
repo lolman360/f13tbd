@@ -1048,6 +1048,8 @@
 			log_emote(log_text)
 		if(LOG_SUBTLER)
 			log_subtler(log_text)
+		if(LOG_SUBTLE)
+			log_subtle(log_text)
 		if(LOG_DSAY)
 			log_dsay(log_text)
 		if(LOG_PDA)
@@ -1276,3 +1278,7 @@
 		// first of all make sure we valid
 		var/mouseparams = list2params(paramslist)
 		usr_client.Click(src, loc, null, mouseparams)
+
+///Adds the debris element for projectile impacts
+/atom/proc/add_debris_element()
+	AddElement(/datum/element/debris, null, -15, 8, 0.7)

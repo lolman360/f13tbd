@@ -57,7 +57,8 @@ Administrator
 	forbids = "Causing harm to others except in times of self-defense."
 	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. While your goal is to assist those who need your help, you do not have to help everyone, and may turn away anyone - you are not obligated to revive a raider or Legionnaire dropped at your doorstep. Preaching humanitarianism and valuing human life. Assist and provide medical services to those in need. Provide free education for all those who are willing to learn."
 	selection_color = "#FF95FF"
-	exp_requirements = 0
+	exp_type = EXP_TYPE_FOLLOWERS
+	exp_requirements = 1200
 
 	outfit = /datum/outfit/job/followers/f13leadpractitioner
 
@@ -87,7 +88,7 @@ Administrator
 	uniform =	/obj/item/clothing/under/f13/followers
 	suit=	/obj/item/clothing/suit/hooded/followerlight
 	shoes =	/obj/item/clothing/shoes/f13/brownie
-	belt =	/obj/item/healthanalyzer/advanced
+	belt = /obj/item/storage/belt/utility/full/engi
 	backpack =	/obj/item/storage/backpack/medic
 	satchel =	/obj/item/storage/backpack/satchel/med
 	duffelbag =	/obj/item/storage/backpack/duffelbag/med
@@ -95,10 +96,11 @@ Administrator
 		/obj/item/reagent_containers/glass/beaker/bluespace = 1,
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/reagent_containers/medspray/synthflesh = 2,
-		/obj/item/reagent_containers/hypospray/combat = 1,
 		/obj/item/clothing/glasses/hud/health = 1,
 		/obj/item/book/granter/trait/chemistry = 1,
 		/obj/item/book/granter/trait/techno = 1,
+		/obj/item/healthanalyzer/advanced = 1,
+		/obj/item/pda/medical = 1,
 	)
 
 /*
@@ -116,7 +118,8 @@ Practitioner
 	forbids = "Causing harm to others except in times of self-defense."
 	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. While your goal is to assist those who need your help, you do not have to help everyone, and may turn away anyone - you are not obligated to revive a raider or Legionnaire dropped at your doorstep. Preaching humanitarianism and valuing human life. Assist and provide medical services to those in need. Provide free education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
-	exp_requirements = 0
+	exp_type = EXP_TYPE_FOLLOWERS
+	exp_requirements = 600
 
 	outfit = /datum/outfit/job/followers/f13practitioner
 	matchmaking_allowed = list(
@@ -202,6 +205,7 @@ Practitioner
 		/obj/item/reagent_containers/medspray/synthflesh = 2,
 		/obj/item/pda/medical = 1,
 		/obj/item/healthanalyzer=1,
+		/obj/item/roller = 2,
 	)
 
 /datum/outfit/loadout/medical_researcher
@@ -272,6 +276,7 @@ Follower Volunteer
 	backpack_contents = list(
 		/obj/item/healthanalyzer = 1,
 		/obj/item/reagent_containers/medspray/synthflesh = 1,
+		/obj/item/roller = 2,
 	)
 
 /datum/outfit/loadout/volunteer_mechanic
@@ -321,7 +326,8 @@ Follower Volunteer
 	forbids = "Causing harm to others except in times of self-defense or in defense of other followers."
 	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. While your goal is to assist those who need your help, you do not have to help everyone, and may turn away anyone - you are not obligated to revive a raider or Legionnaire dropped at your doorstep. Preaching humanitarianism and valuing human life. Assist and provide medical services to those in need. Provide free education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
-	exp_requirements = 300
+	exp_type = EXP_TYPE_FOLLOWERS
+	exp_requirements = 120
 
 	outfit = /datum/outfit/job/followers/f13followerguard
 
@@ -374,8 +380,8 @@ Follower Volunteer
 	flag = F13FOLCYBORG
 	department_flag = FOLLOWERS
 	faction = "Followers"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "Administrator and Doctors, in that order"
 	exp_requirements = 0
 	description = "You are a Robotic unit assigned to this clinic. As a Robot for the Followers, you're bound to the orders of the Administrator and Doctors, in that order for priority. Should the Administrator declare something, you must follow it."

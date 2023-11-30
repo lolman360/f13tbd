@@ -92,7 +92,7 @@
 	desc = "should not exist"
 	can_scope = TRUE
 	scope_state = "scope_long"
-	fire_delay = 3
+	fire_delay = 1
 	slowdown = 0.2
 	scope_x_offset = 5
 	scope_y_offset = 13
@@ -125,6 +125,7 @@
 	extra_speed = 200
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 	extra_damage = 4
+	fire_delay = 1.5
 
 
 //Brush gun								Keywords: .45-70, Lever action, 10 round internal, Long barrel
@@ -135,7 +136,7 @@
 	item_state = "brushgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube4570
 	extra_speed = 100
-	fire_delay = 3
+	fire_delay = 2.55
 	recoil = 0.15
 	fire_sound = 'sound/f13weapons/brushgunfire.ogg'
 	extra_penetration = 0.12
@@ -150,7 +151,7 @@
 	fire_delay = 2.25
 	recoil = 0.10
 	fire_sound = 'sound/f13weapons/brushgunfire.ogg'
-	extra_penetration = 0.4
+	extra_penetration = 0.15
 
 
 ////////////////////////
@@ -332,7 +333,7 @@
 	icon_state = "amr"
 	item_state = "amr"
 	mag_type = /obj/item/ammo_box/magazine/amr
-	fire_delay = 22
+	fire_delay = 12
 	recoil = 10
 	slowdown = 1.45 //.20 higher than the M1919 MMG.
 	spread = 0
@@ -347,13 +348,6 @@
 	..()
 	if(HAS_TRAIT(user, TRAIT_FAST_PUMP))
 		src.pump(user)
-	if((prob(95) && !zoomed))
-		var/mob/living/carbon/human/H = user
-		playsound(loc, 'sound/f13effects/surrender.ogg', 100, 1)
-		shake_camera(user, recoil + 1, recoil)
-		to_chat(user, "<span class ='danger'>You attempt to fire the rifle from the hip unprepared, tossing you to the ground!</span>")
-		H.visible_message("<span class='danger'>[H] drops to the floor from recoil as they fire unprepared!</span>")
-		user.Knockdown(60)
 
 // BETA // Obsolete
 /obj/item/gun/ballistic/rifle/rifletesting

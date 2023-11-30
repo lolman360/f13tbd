@@ -201,7 +201,7 @@
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_HEAVY //Automatic fire and onehanded use mix poorly.
+	weapon_weight = WEAPON_HEAVY	//Automatic fire and onehanded use mix poorly.
 	slowdown = 0.4
 	fire_delay = 3.75
 	burst_shot_delay = 3
@@ -240,19 +240,18 @@
 	is_automatic = TRUE
 	automatic = 1
 	autofire_shot_delay = 2.15 //It's so awfully inaccurate now that it's more of a gimmick than a buff
-	spread = 16
+	spread = 12
 	recoil = 0.85
 	can_attachments = TRUE
 	can_suppress = FALSE
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
-	extra_damage = -6
-	extra_penetration = 0.15
+	extra_penetration = 0.05
 
-//Greasegun				Keywords: 9mm, Automatic, 30 rounds
+//Greasegun				Keywords: .45, Automatic, 30 rounds
 /obj/item/gun/ballistic/automatic/smg/greasegun
-	name = "9mm submachine gun"
-	desc = "An inexpensive submachine gun, chambered in 9mm. Very high rate of fire in bursts."
+	name = "Grease Gun"
+	desc = "An inexpensive submachine gun, chambered in .45 ACP. Very high rate of fire in bursts."
 	icon_state = "grease_gun"
 	item_state = "smg9mm"
 	mag_type = /obj/item/ammo_box/magazine/greasegun
@@ -261,7 +260,7 @@
 	burst_shot_delay = 2.75
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2.5
+	autofire_shot_delay = 3
 	can_attachments = TRUE
 	suppressor_state = "uzi_suppressor"
 	suppressor_x_offset = 26
@@ -293,7 +292,7 @@
 	return
 
 /obj/item/gun/ballistic/automatic/smg/greasegun/worn
-	name = "beat up 9mm submachine gun"
+	name = "beat up Grease gun"
 	desc = "What was once an inexpensive, but reliable submachine gun is now an inexpensive piece of shit. It's impressive this thing still fires at all."
 	can_attachments = FALSE
 	spread = 16.5
@@ -323,6 +322,7 @@
 	update_icon()
 	return
 
+
 //10mm SMG			Keywords: 10mm, Automatic, 12/24 rounds
 /obj/item/gun/ballistic/automatic/smg/smg10mm
 	name = "10mm submachine gun"
@@ -335,10 +335,11 @@
 	is_automatic = TRUE
 	automatic = 1
 	autofire_shot_delay = 2.35
-	spread = 12
+	spread = 10
 	slowdown = 0.3
 	recoil = 0.5
 	fire_delay = 3.25
+	extra_damage = 2
 	can_attachments = TRUE
 	suppressor_state = "10mm_suppressor" //activate if sprited
 	suppressor_x_offset = 30
@@ -389,7 +390,7 @@
 	automatic = 1
 	slowdown = 0.3
 	autofire_shot_delay = 2
-	spread = 16
+	spread = 12
 	can_suppress = TRUE
 	can_attachments = TRUE
 	suppressor_state = "uzi_suppressor"
@@ -437,7 +438,6 @@
 	can_suppress = FALSE
 	can_attachments = TRUE
 	extra_damage = -4
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_prefix = "micro"
 
 //Carl Gustaf			Keywords: 10mm, Automatic, 36 rounds
@@ -497,8 +497,6 @@
 /obj/item/gun/ballistic/automatic/smg/tommygun/whitelegs
 	name = "Storm Drum"
 	desc = "A recovered ancient Thompson from an armory far up North. Commonly used by raiders of the White Legs tribe."
-	mag_type = /obj/item/ammo_box/magazine/tommygunm45
-	init_mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
 	fire_delay = 3.75
 	spread = 19
 
@@ -506,14 +504,11 @@
 /obj/item/gun/ballistic/automatic/smg/tommygun/chicago
 	name = "M1928 Chicago Typewriter"
 	desc = "A powerful submachinegun chambered in .45 ACP, this weapon fires at a blistering rate with a heavy pistol cartridge, popular for its use by gangs of the Old World. This model was more expensive and stopped being produced."
-	mag_type = /obj/item/ammo_box/magazine/tommygunm45
 	init_mag_type = /obj/item/ammo_box/magazine/tommygunm45
 	autofire_shot_delay = 1.25
 	spread = 28		// RATTLE 'EM, BOYS!
 	slowdown = 0.6	//Higher
 	icon_state = "typewriter"
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	icon_prefix = "typewriter"
 	extra_damage = -5
 
 //P90				Keywords: 10mm, Automatic, 50 rounds. Special modifiers: damage +1
@@ -532,6 +527,7 @@
 	autofire_shot_delay = 2
 	burst_shot_delay = 2.5
 	recoil = 0.25
+	extra_damage = 2
 	can_suppress = TRUE
 	suppressor_state = "pistol_suppressor"
 	suppressor_x_offset = 29
@@ -559,14 +555,15 @@
 	slowdown = 0.25
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2.15
+	autofire_shot_delay = 2
 	burst_shot_delay = 2
 	suppressed = 1
-	recoil = 0.05
+	recoil = 0.1
 	can_attachments = TRUE
 	can_suppress = FALSE
 	can_unsuppress = FALSE
 	fire_sound = 'sound/weapons/Gunshot_silenced.ogg'
+	extra_penetration = 0.1
 
 
 //Ppsh-41				Keywords: 9mm, Automatic, 71 rounds.
@@ -762,7 +759,7 @@
 	desc = "Legends are told of the \"Ratslayer\", a custom-made souped-up varmint rifle with a sick paintjob. This is a pale imitation, made of chopped-up bits of other guns."
 	icon_state = "verminrifle"
 	item_state = "ratslayer"
-
+	fire_delay = 1.5 //50% higher than service rifle
 	suppressed = 1
 	zoomable = TRUE
 	zoom_amt = 10
@@ -770,7 +767,8 @@
 	can_unsuppress = FALSE
 	suppressor_state = "none"
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
-	extra_penetration = 0.05
+	extra_speed = 800 //pew
+
 
 //Ratslayer									Keywords: UNIQUE, 5.56, 10/20/30 round magazine, Suppressed, Scoped
 /obj/item/gun/ballistic/automatic/varmint/ratslayer
@@ -785,19 +783,35 @@
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 	extra_penetration = 0.15
 
-//Combat Rifle		Keywords: .45 Caliber Rifle, BoS rifle
-/obj/item/gun/ballistic/automatic/combat
-	name = "Combat Rifle"
-	desc = "A .45 semi-automatic combat rifle, produced pre-war for National Guard forces."
-	icon_state = "combat_rifle"
+//Combat Carbine	Keywords: .45 Caliber Rifle, Town rifle
+/obj/item/gun/ballistic/automatic/combatcarbine
+	name = "Combat Carbine"
+	desc = "A .45 semi-automatic combat carbine, produced pre-war for National Guard forces."
+	icon_state = "combat_c"
 	item_state = "combatrifle"
 	icon_prefix = "combatrifle"
 	mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
-	fire_delay = 3
+	fire_delay = 2
 	burst_size = 1
 	spread = 1
 	slowdown = 0.25
 	extra_penetration = 0.1
+	automatic_burst_overlay = FALSE
+	semi_auto = TRUE
+	fire_sound = 'sound/weapons/gunshot_smg.ogg'
+
+	//Combat Rifle	Keywords: .308 Caliber Rifle, Town rifle
+/obj/item/gun/ballistic/automatic/combat
+	name = "Combat Rifle"
+	desc = "A .308 semi-automatic combat rifle, Modified from carbines produced pre-war for National Guard forces."
+	icon_state = "combat_rifle"
+	item_state = "combatrifle"
+	icon_prefix = "combatrifle"
+	mag_type = /obj/item/ammo_box/magazine/w308
+	fire_delay = 2
+	burst_size = 1
+	spread = 1
+	slowdown = 0.35
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
 	fire_sound = 'sound/f13weapons/combatrifle.ogg'
@@ -838,24 +852,6 @@
 	suppressor_y_offset = 28
 	extra_damage = -3
 	extra_penetration = 0.1
-
-
-//Police rifle			Keywords: KHANS, 5.56mm, Semi-auto, 20 (10-50) round magazine
-/obj/item/gun/ballistic/automatic/marksman/policerifle_khans
-	name = "Kit Bashed Rifle"
-	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by local Khan gunsmiths. Somehow, you feel safer holding this."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon_prefix = "assault_carbine"
-	icon_state = "rifle-police"
-	item_state = "assault_carbine"
-	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	spread = 1.1
-	fire_delay = 2.5
-	can_suppress = FALSE
-	can_scope = TRUE
-	zoomable = FALSE
 
 
 //Marksman carbine			Keywords: 5.56mm, Semi-auto, 20 (10-50) round magazine, Small scope
@@ -912,6 +908,7 @@
 	scope_x_offset = 4
 	scope_y_offset = 11
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	extra_penetration = 0.2
 
 
 // Enfield SLR				Keywords: 7.62mm, Semi-auto, 10/20 round magazine
@@ -1095,8 +1092,6 @@
 	item_state = "venator_sniper"
 	fire_delay = 2
 	slowdown = 0.12
-	zoom_amt = 15
-	zoom_out_amt = 17
 
 /obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger
 	name = "compact sniper rifle"
@@ -1165,11 +1160,11 @@
 	item_state = "fnfal"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	spread = 9
-	fire_delay = 3.5
+	fire_delay = 2.5
 	burst_shot_delay = 2
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2.5
+	autofire_shot_delay = 2
 	recoil = 0.6
 	can_suppress = FALSE
 	can_unsuppress = FALSE
@@ -1404,13 +1399,12 @@
 	slowdown = 1.25
 	recoil = 1
 	mag_type = /obj/item/ammo_box/magazine/lmg
-	fire_delay = 2.7
+	fire_delay = 2
 	burst_shot_delay = 3
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 1.13
+	autofire_shot_delay = 1.5
 	spread = 12
-	extra_speed = -80
 	can_attachments = FALSE
 	actions_types = null
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
@@ -1452,14 +1446,15 @@
 	icon_state = "M38"
 	item_state = "M38"
 	slot_flags = 0
-	slowdown = 1.25
+	slowdown = 1.3
 	mag_type = /obj/item/ammo_box/magazine/mm762
 	burst_shot_delay = 1.5
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 1.1
+	autofire_shot_delay = 2
 	fire_delay = 2
-	spread = 8
+	spread = 12
+	extra_damage = -5
 	can_attachments = FALSE
 	var/cover_open = FALSE
 	var/require_twohands = FALSE
@@ -1528,7 +1523,7 @@
 	slot_flags = SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/m2mm
 	burst_size = 1
-	fire_delay = 10
+	fire_delay = 16
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13

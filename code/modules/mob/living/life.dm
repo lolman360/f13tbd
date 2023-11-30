@@ -117,7 +117,7 @@
 	return
 
 /mob/living/proc/handle_mutations_and_radiation()
-	radiation = 0 //so radiation don't accumulate in simple animals
+	radloss = 0 //so radiation don't accumulate in simple animals
 	return
 
 /mob/living/proc/handle_diseases()
@@ -150,7 +150,7 @@
 	else
 		ExtinguishMob()
 		return
-	var/datum/gas_mixture/G = loc.return_air() // Check if we're standing in an oxygenless environment
+	//var/datum/gas_mixture/G = loc.return_air() // Check if we're standing in an oxygenless environment
 	/*if(!G.get_moles(GAS_O2, 1))
 		ExtinguishMob() //If there's no oxygen in the tile we're on, put out the fire
 		return

@@ -96,13 +96,9 @@
 	desc = "A bulletproof combat helmet that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
 	icon_state = "helmetalt"
 	item_state = "helmetalt"
-	armor = list("melee" = 35, "bullet" = 60, "laser" = 30, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
+	armor = list("melee" = 27, "bullet" = 60, "laser" = 27, "energy" = 35, "bomb" = 50, "bio" = 40, "rad" = 10, "fire" = 60, "acid" = 10, "wound" = 10)
 	can_flashlight = 1
 	dog_fashion = null
-
-/obj/item/clothing/head/helmet/alt/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/head/helmet/old
 	name = "degrading helmet"
@@ -480,6 +476,6 @@
 
 /obj/item/clothing/head/helmet/armyhelmet/heavy/ncra
 	name = "NCR heavy steel helmet"
-	desc = "A visor'd steel helmet, inspired by pre-War designs. This one is coloured in tan, and is usually worn by Heavy Gunners of the New California Republic Army."
+	desc = "A reinforced NCR trooper helmet with a visor. Usually seen to be worn by Heavy Gunners of the New California Republic Army."
 	icon_state = "ncrarmyhelmetheavy"
 	item_state = "ncrarmyhelmetheavy"
