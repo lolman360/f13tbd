@@ -265,8 +265,8 @@
 /datum/job/enclave/enclavesgt
 	title = "Enclave Sergeant"
 	flag = F13USSGT
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	description = "You're an NCO in a force of Enclave Remnant marines, part of the Rapid Reaction Corps. You are a well-trained soldier, entrusted with a valuable suit of Advanced Power Armor and heavy weapons. Depending on the mission, you may provide fire support in heavy combat or you may command covert teams in the field."
 	supervisors = "The Lieutenant and the Gunnery Sergeant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavesgt
@@ -475,8 +475,8 @@
 /datum/job/enclave/enclavespy
 	title = "Enclave Marine"
 	flag = F13USPRIVATE
-	total_positions = 3
-	spawn_positions = 4
+	total_positions = 5
+	spawn_positions = 5
 	description = "You're a grunt in a force of Enclave Remnant marines, part of the Rapid Reaction Corps. You may be an experienced trooper, or you may be a fresh recruit in need of training, either from the Enclave's tiny population, the hidden, Enclave-controlled Vault 45, or from concealed Enclave cryostasis bunkers. Be careful not to do anything that will expose the Enclave's presence to its many enemies."
 	supervisors = "The Lieutenant, the Sergeants, and the Specialists."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavespy
