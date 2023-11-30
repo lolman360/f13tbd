@@ -547,10 +547,14 @@
 /obj/item/storage/belt/bandolier/durathread/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 32
-	STR.display_numerical_stacking = TRUE
+	STR.max_items = 9
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	CANHOLD_STATIC(STR, typecacheof(list(
-		/obj/item/ammo_casing
+		/obj/item/ammo_box/shotgun,
+		/obj/item/ammo_box/lasmusket,
+		/obj/item/reagent_containers/food/drinks/flask,
+		/obj/item/grenade,
+		/obj/item/reagent_containers/food/drinks/bottle/molotov,
 		)))
 
 //CIT QUIVER
