@@ -273,7 +273,7 @@
 	desc = "A suture infused with drugs that speed up wound healing of the treated laceration."
 	heal_brute = 15
 	stop_bleeding = 8
-	grind_results = list(/datum/reagent/medicine/stimpakimitation = 2) //because broc and xander
+	grind_results = list(/datum/reagent/medicine/stimpak/imitation = 2) //because broc and xander
 	merge_type = /obj/item/stack/medical/suture/medicated
 
 /obj/item/stack/medical/suture/medicated/five
