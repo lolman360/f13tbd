@@ -342,7 +342,7 @@
 
 /datum/chemical_reaction/medsuture
 	id = "medsuture"
-	required_reagents = list(/datum/reagent/cellulose = 10, /datum/reagent/medicine/stimpakimitation = 20, /datum/reagent/abraxo_cleaner/sterilizine = 5)
+	required_reagents = list(/datum/reagent/cellulose = 10, /datum/reagent/medicine/stimpak/imitation = 10, /datum/reagent/abraxo_cleaner/sterilizine = 5)
 
 /datum/chemical_reaction/medsuture/on_reaction(datum/reagents/holder, created_volume)
 	var/location = get_turf(holder.my_atom)
