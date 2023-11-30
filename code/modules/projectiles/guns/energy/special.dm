@@ -381,13 +381,14 @@
 //Gutsy flamethrower
 /obj/item/gun/energy/gutsy_flamethrower
 	name = "integrated flamethrower"
-	desc = "An energy-based laser gun that draws power from the cyborg's internal energy cell directly. So this is what freedom looks like?"
+	desc = "A flamethrower integrated directly into a Mr. Gutsy. This one has limiters to prevent rapid depletion of charge."
 	icon = 'icons/obj/guns/flamethrower.dmi'
 	icon_state = "m2_flamethrower_on"
 	item_state = "m2flamethrower"
 	can_charge = FALSE
 	selfcharge = EGUN_SELFCHARGE_BORG
 	cell_type = /obj/item/stock_parts/cell/secborg
+	fire_delay = 10
 	charge_delay = 3
 	ammo_type = list(/obj/item/ammo_casing/energy/flamethrower)
 

@@ -267,7 +267,7 @@ as performing this in action() will cause the upgrade to end up in the borg inst
 		R.module.add_module(M, FALSE, TRUE)
 
 /obj/item/borg/upgrade/syndicate
-	name = "illegal equipment module"
+	name = "offensive equipment module"
 	desc = "Unlocks the hidden, deadlier functions of a cyborg."
 	icon_state = "cyborg_upgrade3"
 	require_module = 1
