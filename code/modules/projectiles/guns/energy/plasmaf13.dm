@@ -2,13 +2,24 @@
 //////////////////
 //PLASMA WEAPONS//
 //////////////////
+//Plasma Rifle
+/obj/item/gun/energy/laser/plasma
+	name ="plasma rifle"
+	item_state = "plasma"
+	icon_state = "plasrifle"
+	icon = 'icons/obj/guns/gunfruits2022/energy.dmi'
+	weapon_weight = WEAPON_HEAVY
+	desc = "An advanced man-portable Winchester plasma rifle based on an older military design. Fires bolts of plasma that form into toroids in the chamber, which are then sent down a superconducting barrel and propelled by electromagnetic claws."
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
+	slowdown = 0.2
+	fire_delay = 5
 
 //Plasma pistol
 /obj/item/gun/energy/laser/plasma/pistol
 	name ="plasma pistol"
-	slowdown = 0
 	item_state = "plasma-pistol"
-	icon = 'icons/obj/guns/gunfruits2022/energy.dmi'
 	icon_state = "plaspistol"
 	desc = "A REPCONN-made pistol-sized plasma caster based on a Winchester model. Fires bolts of plasma that form into toroids in the chamber, which are then sent down a superconducting barrel and propelled by electromagnetic claws."
 	w_class = WEIGHT_CLASS_NORMAL
@@ -17,7 +28,8 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
-	fire_delay = 2
+	slowdown = 0
+	fire_delay = 3
 
 //BoS knight craftable plasma pistol
 /obj/item/gun/energy/laser/plasma/pistol/light
@@ -40,19 +52,18 @@
 
 //Glock 86 Plasma pistol
 /obj/item/gun/energy/laser/plasma/glock
-	name = "advanced plasma pistol"
+	name = "glock 86"
 	desc = "A bleeding edge Glock 86 plasma pistol, designed by the Gaston Glock AI Supercomputer. Fires bolts of plasma that form into toroids in the chamber, which are then sent down a superconducting barrel lined with electromagnetic coils. Reliable, lightweight, and energy efficient."
 	item_state = "plasma-pistol"
-	icon = 'icons/obj/guns/gunfruits2022/energy.dmi'
 	icon_state = "glock"
-	slowdown = 0.1
-	fire_delay = 2
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_MEDIUM
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/glock)
 	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	fire_delay = 3
+	slowdown = 0.1
 
 //Glock 86 A Plasma pistol
 /obj/item/gun/energy/laser/plasma/glock/extended
@@ -64,22 +75,6 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/glock/extended)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 
-
-//Plasma Rifle
-/obj/item/gun/energy/laser/plasma
-	name ="plasma rifle"
-	item_state = "plasma"
-	icon_state = "plasma"
-	slowdown = 0.2
-	icon = 'icons/obj/guns/gunfruits2022/energy.dmi'
-	icon_state = "plasrifle"
-	fire_delay = 5.2
-	desc = "An advanced man-portable Winchester plasma rifle based on an older military design. Fires bolts of plasma that form into toroids in the chamber, which are then sent down a superconducting barrel and propelled by electromagnetic claws."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
-	cell_type = /obj/item/stock_parts/cell/ammo/mfc
-	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
-
-
 //Plasma carbine
 /obj/item/gun/energy/laser/plasma/carbine
 	name ="plasma carbine"
@@ -90,6 +85,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasmacarbine)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	fire_delay = 1.5
+	weapon_weight = WEAPON_MEDIUM
 	burst_size = 2
 	burst_shot_delay = 1.5
 	actions_types = list(/datum/action/item_action/toggle_firemode)
@@ -114,7 +110,7 @@
 	item_state = "multiplas"
 	icon = 'icons/obj/guns/gunfruits2022/energy.dmi'
 	icon_state = "multiplas"
-	fire_delay = 3
+	fire_delay = 5
 	desc = "A heavily modified version of an urban plasma rifle equipped with a multi-caster attachment for a barrel. Fires bolts of plasma that form into toroids in the chamber, which are then sent down a split barrel and propelled by electromagnetic coils."
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/scatter)
