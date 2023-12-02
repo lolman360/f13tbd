@@ -310,7 +310,7 @@
 	},
 /area/f13/tunnel)
 "dg" = (
-/obj/structure/frame/machine,
+/obj/effect/landmark/start/f13/enclave_synthetic,
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/enclave)
 "dh" = (
@@ -3672,6 +3672,10 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/f13,
+/area/f13/enclave)
+"CW" = (
+/obj/machinery/recharge_station,
+/turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/enclave)
 "CX" = (
 /obj/effect/decal/cleanable/dirt,
@@ -23235,7 +23239,7 @@ Jj
 Jx
 Jx
 nm
-dg
+EI
 iI
 iI
 Sb
@@ -23492,8 +23496,8 @@ gm
 Hs
 CT
 AW
-EI
-iI
+CW
+dg
 Cx
 iI
 iI
