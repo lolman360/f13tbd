@@ -1273,7 +1273,7 @@
 	autofire_shot_delay = 1.75
 	spread = 18 //high-velocity
 	can_attachments = TRUE
-	can_scope = FALSE
+	can_scope = TRUE //guh
 	scope_state = "scope_short"
 	scope_x_offset = 4
 	scope_y_offset = 15

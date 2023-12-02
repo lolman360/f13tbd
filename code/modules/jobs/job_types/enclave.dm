@@ -472,6 +472,8 @@
 		/obj/item/book/granter/trait/midsurgery = 1,
 		/obj/item/storage/pill_bottle/chem_tin/mentats = 1,
 		/obj/item/ammo_box/magazine/uzim9mm = 2,
+		/obj/item/gun/energy/laser/plasma/pistol/light = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2
 		)
 
 /datum/outfit/loadout/combatengie
@@ -480,8 +482,8 @@
 	gloves = /obj/item/clothing/gloves/color/yellow
 	head = /obj/item/clothing/head/hardhat/orange
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
-		/obj/item/ammo_box/magazine/m45exp = 2,
+		/obj/item/gun/energy/laser/plasma/pistol/light = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/storage/belt/utility = 1,
 		/obj/item/gun/ballistic/shotgun/police = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
@@ -534,13 +536,17 @@
 	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/uzim9mm = 2,
+		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
+		/obj/item/ammo_box/magazine/m45exp = 2
 		)
 
 /datum/outfit/loadout/mobileartillery
 	name = "Pointman Rifleman"
-	suit_store = /obj/item/gun/energy/laser/plasma/pistol
+	suit_store = /obj/item/gun/energy/laser/plasma/glock
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
+		/obj/item/ammo_box/magazine/m45exp = 2
 		)
 
 /datum/outfit/job/enclave/peacekeeper/enclavespy/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
