@@ -13,7 +13,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
-	slowdown = 0.2
+	slowdown = 0.3
 	fire_delay = 5
 
 //Plasma pistol
@@ -91,6 +91,7 @@
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	can_scope = TRUE
 	scope_state = "plasma_scope"
+	slowdown = 0.15
 	scope_x_offset = 13
 	scope_y_offset = 16
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
