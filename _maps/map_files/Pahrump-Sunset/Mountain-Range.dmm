@@ -2072,12 +2072,12 @@
 "qW" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/turf_decal/bot,
-/obj/item/card/id/syndicate/anyone,
-/obj/item/card/id/syndicate/anyone,
-/obj/item/card/id/syndicate/anyone,
-/obj/item/card/id/syndicate/anyone,
-/obj/item/card/id/syndicate/anyone,
-/obj/item/card/id/syndicate/anyone,
+/obj/item/card/id/syndicate,
+/obj/item/card/id/syndicate,
+/obj/item/card/id/syndicate,
+/obj/item/card/id/syndicate,
+/obj/item/card/id/syndicate,
+/obj/item/card/id/syndicate,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/enclave)
 "qY" = (

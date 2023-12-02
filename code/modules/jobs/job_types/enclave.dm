@@ -536,13 +536,13 @@
 	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/uzim9mm = 2,
-		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
-		/obj/item/ammo_box/magazine/m45exp = 2
+		/obj/item/gun/energy/laser/plasma/pistol/light = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2
 		)
 
 /datum/outfit/loadout/mobileartillery
 	name = "Pointman Rifleman"
-	suit_store = /obj/item/gun/energy/laser/plasma/glock
+	suit_store = /obj/item/gun/energy/laser/plasma
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
