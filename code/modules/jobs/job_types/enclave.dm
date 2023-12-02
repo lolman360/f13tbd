@@ -542,7 +542,7 @@
 
 /datum/outfit/loadout/mobileartillery
 	name = "Pointman Rifleman"
-	suit_store = /obj/item/gun/energy/laser/plasma
+	suit_store = /obj/item/gun/energy/laser/plasma/pistol
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
