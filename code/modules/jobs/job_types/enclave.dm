@@ -825,3 +825,4 @@
 	ADD_TRAIT(R, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 	R.apply_pref_name("cyborg", M.client)
 	R.gender = NEUTER
+	R.forceMove(pick(GLOB.enclave_borg_start))

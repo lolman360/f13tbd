@@ -373,6 +373,11 @@
 	name = "Enclave Synthetic"
 	icon_state = "Cyborg"
 
+/obj/effect/landmark/start/f13/encborg/Initialize(mapload)
+	..()
+	GLOB.enclave_borg_start += loc
+	return INITIALIZE_HINT_QDEL
+
 /obj/effect/landmark/start/f13/uspilot
 	name = "Enclave Pilot Officer"
 	icon_state = "uslt"
@@ -421,7 +426,7 @@
 
 /obj/effect/landmark/start/f13/followersrobot/Initialize(mapload)
 	..()
-	GLOB.special_borg_start += loc
+	GLOB.followers_borg_start += loc
 	return INITIALIZE_HINT_QDEL
 
 //Khans
