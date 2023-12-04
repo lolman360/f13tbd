@@ -209,9 +209,10 @@
 
 //Plasma musket.
 /obj/item/gun/ballistic/rifle/hobo/plasmacaster
-	name = "Plasma Musket"
+	name = "plasma musket"
 	desc = "The cooling looks dubious and is that a empty can of beans used as a safety valve? Pray the plasma goes towards the enemy and not your face when you pull the trigger."
 	icon_state = "plasmamusket"
+	icon = 'icons/obj/guns/gunfruits2022/energy.dmi'
 	item_state = "plasmamusket"
 	mag_type = /obj/item/ammo_box/magazine/internal/plasmacaster
 	fire_delay = 20

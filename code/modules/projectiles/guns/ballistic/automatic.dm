@@ -759,7 +759,7 @@
 	desc = "Legends are told of the \"Ratslayer\", a custom-made souped-up varmint rifle with a sick paintjob. This is a pale imitation, made of chopped-up bits of other guns."
 	icon_state = "verminrifle"
 	item_state = "ratslayer"
-
+	fire_delay = 1.5 //50% higher than service rifle
 	suppressed = 1
 	zoomable = TRUE
 	zoom_amt = 10
@@ -767,7 +767,8 @@
 	can_unsuppress = FALSE
 	suppressor_state = "none"
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
-	extra_penetration = 0.05
+	extra_speed = 800 //pew
+
 
 //Ratslayer									Keywords: UNIQUE, 5.56, 10/20/30 round magazine, Suppressed, Scoped
 /obj/item/gun/ballistic/automatic/varmint/ratslayer
@@ -849,7 +850,6 @@
 	scope_y_offset = 15
 	suppressor_x_offset = 26
 	suppressor_y_offset = 28
-	extra_damage = -3
 	extra_penetration = 0.1
 
 
@@ -992,10 +992,8 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	fire_delay = 0.5
+	fire_delay = 1.5
 	can_scope = FALSE
-	automatic = 1
-	autofire_shot_delay = 2.15
 	extra_penetration = 0.1
 	extra_damage = -3
 
@@ -1027,7 +1025,7 @@
 	icon_state = "sks"
 	item_state = "sks"
 	mag_type = /obj/item/ammo_box/magazine/sks
-	fire_delay = 2
+	fire_delay = 2.2
 	extra_speed = 100
 	bayonet_state = "bayonet"
 	knife_x_offset = 24
@@ -1272,7 +1270,7 @@
 	autofire_shot_delay = 1.75
 	spread = 18 //high-velocity
 	can_attachments = TRUE
-	can_scope = FALSE
+	can_scope = TRUE //guh
 	scope_state = "scope_short"
 	scope_x_offset = 4
 	scope_y_offset = 15

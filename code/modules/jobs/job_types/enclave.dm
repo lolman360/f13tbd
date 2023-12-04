@@ -87,7 +87,7 @@
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
-		/obj/item/card/id/syndicate/anyone =1
+		/obj/item/card/id/syndicate =1
 		)
 
 /datum/outfit/loadout/cpt_ballistics
@@ -155,7 +155,7 @@
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
-		/obj/item/card/id/syndicate/anyone = 1,
+		/obj/item/card/id/syndicate = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/clothing/mask/chameleon = 1
 		)
@@ -206,14 +206,17 @@
 	exp_requirements = 1020
 
 	loadout_options = list(
-		/datum/outfit/loadout/gysgt_ballistics, // APA
-		/datum/outfit/loadout/gysgt_melee, // MCA
+		/datum/outfit/loadout/gysgt_caster,
+		/datum/outfit/loadout/gysgt_gauss,
+		/datum/outfit/loadout/gysgt_spear
 		)
 
 /datum/outfit/job/enclave/peacekeeper/f13gysergeant
 	name = "Enclave Gunnery Sergeant"
 	jobtype = /datum/job/enclave/f13gysergeant
-	accessory = /obj/item/clothing/accessory/enclave/sergeant_firstclass
+	accessory = /obj/item/clothing/accessory/enclave/gunnery_sergeant
+	head = /obj/item/clothing/head/helmet/f13/enclave/marine
+	suit = /obj/item/clothing/suit/armor/f13/enclave/marine
 	ears = /obj/item/radio/headset/headset_enclave/command
 
 	backpack_contents = list(
@@ -223,29 +226,38 @@
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/megaphone = 1,
-		/obj/item/card/id/syndicate/anyone = 1,
-		/obj/item/stock_parts/cell/ammo/mfc = 3,
+		/obj/item/card/id/syndicate = 1,
 		/obj/item/clothing/mask/chameleon = 1
 		)
 
-/datum/outfit/loadout/gysgt_ballistics
-	name = "Armored Rifleman"
-	head = /obj/item/clothing/head/helmet/f13/power_armor/x02helmet
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/x02
-
+/datum/outfit/loadout/gysgt_caster
+	name = "Close Quarters Assaultman"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/plasma = 1
-	)
+		/obj/item/gun/energy/laser/plasma/caster = 1,
+		/obj/item/stock_parts/cell/ammo/mfc = 5,
+		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
+		/obj/item/ammo_box/magazine/m45exp = 2,
+		/obj/item/grenade/f13/frag = 1
+		)
 
-/datum/outfit/loadout/gysgt_melee
-	name = "Mobile Rifleman"
-	suit = /obj/item/clothing/suit/armor/f13/enclave/marine
-	head = /obj/item/clothing/head/helmet/f13/enclave/marine
-
+/datum/outfit/loadout/gysgt_gauss
+	name = "Scout Sniper"
+	suit_store = /obj/item/gun/ballistic/automatic/m72
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/plasma = 1
-	)
+		/obj/item/ammo_box/magazine/m2mm = 2,
+		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
+		/obj/item/ammo_box/magazine/m45exp = 2,
+		/obj/item/grenade/smokebomb = 2
+		)
 
+/datum/outfit/loadout/gysgt_spear
+	name = "Point Defense Assaultman"
+	backpack_contents = list(
+		/obj/item/twohanded/inquis_spear = 1,
+		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
+		/obj/item/ammo_box/magazine/m45exp = 2,
+		/obj/item/grenade/f13/incendiary = 1
+		)
 
 /datum/outfit/job/enclave/peacekeeper/f13gysergeant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -264,8 +276,8 @@
 /datum/job/enclave/enclavesgt
 	title = "Enclave Sergeant"
 	flag = F13USSGT
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	description = "You're an NCO in a force of Enclave Remnant marines, part of the Rapid Reaction Corps. You are a well-trained soldier, entrusted with a valuable suit of Advanced Power Armor and heavy weapons. Depending on the mission, you may provide fire support in heavy combat or you may command covert teams in the field."
 	supervisors = "The Lieutenant and the Gunnery Sergeant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavesgt
@@ -273,9 +285,9 @@
 	exp_requirements = 780
 
 	loadout_options = list(
-		/datum/outfit/loadout/sgt_plascaster,	// Plasma Caster
-		/datum/outfit/loadout/sgt_sniper, //MK23+Gauss
-		/datum/outfit/loadout/sgt_classic, // MK23+Plasma spear
+		/datum/outfit/loadout/sgt_plasrifle,	// Plasma rifle + Mk23
+		/datum/outfit/loadout/sgt_cqc, //Neostead + Plaspistol
+		/datum/outfit/loadout/sgt_classic, // Assault carbine + Plaspistol
 		)
 
 /datum/outfit/job/enclave/peacekeeper/enclavesgt
@@ -293,32 +305,45 @@
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/clothing/head/f13/enclave/peacekeeper = 1,
-		/obj/item/card/id/syndicate/anyone = 1,
+		/obj/item/card/id/syndicate = 1,
 		/obj/item/clothing/mask/chameleon = 1
 		)
 
-/datum/outfit/loadout/sgt_plascaster
-	name = "Close Quarters Assaultman"
+/datum/outfit/loadout/sgt_plasrifle
+	name = "Frontline Assaultman"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/plasma/caster = 1,
-		/obj/item/stock_parts/cell/ammo/mfc = 5
-		)
-
-/datum/outfit/loadout/sgt_sniper
-	name = "Scout Sniper"
-	suit_store = /obj/item/gun/ballistic/automatic/m72
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m2mm = 2,
+		/obj/item/gun/energy/laser/plasma = 1,
+		/obj/item/stock_parts/cell/ammo/mfc = 5,
 		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
 		/obj/item/ammo_box/magazine/m45exp = 2,
+		/obj/item/grenade/f13/frag = 1,
+		/obj/item/grenade/smokebomb = 1
+		)
+
+/datum/outfit/loadout/sgt_cqc
+	name = "Close Quarters Assaultman"
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/combat/neostead
+	backpack_contents = list(
+		/obj/item/ammo_box/shotgun/slug = 2,
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/ammo_box/shotgun/incendiary = 1,
+		/obj/item/gun/energy/laser/plasma/pistol = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/grenade/f13/frag = 1,
+		/obj/item/grenade/smokebomb = 1
 		)
 
 /datum/outfit/loadout/sgt_classic
-	name = "Point Defense Assaultman"
+	name = "Tactical Assaultman"
 	backpack_contents = list(
-		/obj/item/twohanded/inquis_spear = 1,
-		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
-		/obj/item/ammo_box/magazine/m45exp = 2,
+		/obj/item/gun/ballistic/automatic/assault_carbine = 1,
+		/obj/item/ammo_box/magazine/m5mm = 4,
+		/obj/item/attachments/scope = 1,
+		/obj/item/suppressor = 1, //they get a flashlight in their bag
+		/obj/item/gun/energy/laser/plasma/pistol = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/grenade/f13/plasma = 2,
+		/obj/item/grenade/smokebomb = 2
 		)
 
 /datum/outfit/job/enclave/peacekeeper/enclavesgt/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -365,7 +390,7 @@
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/clothing/head/f13/enclave/peacekeeper = 1,
-		/obj/item/card/id/syndicate/anyone =1
+		/obj/item/card/id/syndicate =1
 		)
 
 /datum/outfit/loadout/acpl_ballistics
@@ -424,7 +449,7 @@
 	jobtype = /datum/job/enclave/f13specialist
 	head = /obj/item/clothing/head/helmet/f13/combat/enclave
 	suit = /obj/item/clothing/suit/armor/f13/combat/mk2/enclave
-	accessory = /obj/item/clothing/accessory/enclave/specialist
+	accessory = /obj/item/clothing/accessory/enclave/corporal
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
@@ -432,7 +457,7 @@
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/clothing/mask/chameleon = 1,
-		/obj/item/card/id/syndicate/anyone =1
+		/obj/item/card/id/syndicate =1
 		)
 
 /datum/outfit/loadout/combatmedic
@@ -447,6 +472,8 @@
 		/obj/item/book/granter/trait/midsurgery = 1,
 		/obj/item/storage/pill_bottle/chem_tin/mentats = 1,
 		/obj/item/ammo_box/magazine/uzim9mm = 2,
+		/obj/item/gun/energy/laser/plasma/pistol/light = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2
 		)
 
 /datum/outfit/loadout/combatengie
@@ -455,8 +482,8 @@
 	gloves = /obj/item/clothing/gloves/color/yellow
 	head = /obj/item/clothing/head/hardhat/orange
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
-		/obj/item/ammo_box/magazine/m45exp = 2,
+		/obj/item/gun/energy/laser/plasma/pistol/light = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/storage/belt/utility = 1,
 		/obj/item/gun/ballistic/shotgun/police = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
@@ -474,8 +501,8 @@
 /datum/job/enclave/enclavespy
 	title = "Enclave Marine"
 	flag = F13USPRIVATE
-	total_positions = 3
-	spawn_positions = 4
+	total_positions = 5
+	spawn_positions = 5
 	description = "You're a grunt in a force of Enclave Remnant marines, part of the Rapid Reaction Corps. You may be an experienced trooper, or you may be a fresh recruit in need of training, either from the Enclave's tiny population, the hidden, Enclave-controlled Vault 45, or from concealed Enclave cryostasis bunkers. Be careful not to do anything that will expose the Enclave's presence to its many enemies."
 	supervisors = "The Lieutenant, the Sergeants, and the Specialists."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavespy
@@ -500,7 +527,7 @@
 		/obj/item/pda = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/clothing/mask/chameleon = 1,
-		/obj/item/card/id/syndicate/anyone =1,
+		/obj/item/card/id/syndicate =1,
 		/obj/item/clothing/head/f13/enclave/peacekeeper = 1
 		)
 
@@ -509,6 +536,8 @@
 	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/uzim9mm = 2,
+		/obj/item/gun/energy/laser/plasma/pistol/light = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2
 		)
 
 /datum/outfit/loadout/mobileartillery
@@ -516,6 +545,8 @@
 	suit_store = /obj/item/gun/energy/laser/plasma/pistol
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
+		/obj/item/ammo_box/magazine/m45exp = 2
 		)
 
 /datum/outfit/job/enclave/peacekeeper/enclavespy/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -538,7 +569,6 @@
 	outfit = /datum/outfit/job/enclave/noncombat/enclavesci
 	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 600
-	roleplay_exclusive_notify = 1
 	access = list(ACCESS_ENCLAVE, ACCESS_SECURITY, ACCESS_AI_UPLOAD)
 
 /datum/outfit/job/enclave/noncombat/enclavesci
@@ -560,7 +590,7 @@
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/clothing/mask/chameleon = 1,
-		/obj/item/card/id/syndicate/anyone = 1,
+		/obj/item/card/id/syndicate = 1,
 		/obj/item/book/granter/crafting_recipe/gunsmith_three=1,
 		/obj/item/book/granter/crafting_recipe/gunsmith_four=1
 		)
@@ -595,7 +625,6 @@
 	supervisors = "Enclave Upper Echelon, Air Force Division."
 	outfit = /datum/outfit/job/enclave/noncombat/enclavepilot
 	req_admin_notify = 1
-	roleplay_exclusive_notify = 1
 	exp_requirements = 1000
 	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_COMMAND, ACCESS_SECURITY, ACCESS_AI_UPLOAD)
 
@@ -615,7 +644,7 @@
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/clothing/mask/chameleon = 1,
-		/obj/item/card/id/syndicate/anyone =1
+		/obj/item/card/id/syndicate =1
 		)
 
 /datum/outfit/job/enclave/noncombat/enclavepilot/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -640,7 +669,6 @@
 	enforces = "You are not permitted to leave the base. You are a non-combatant. You cannot join any raids or battles on the surface. You cannot run dungeons."
 	supervisors = "Everyone else."
 	outfit = /datum/outfit/job/enclave/noncombat/f13BDUTY
-	roleplay_exclusive_notify = 1
 	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 600
 
@@ -658,7 +686,6 @@
 	id = /obj/item/card/id/dogtag/enclave/trooper
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	uniform = /obj/item/clothing/under/f13/enclave/peacekeeper
-	accessory = /obj/item/clothing/accessory/enclave
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
@@ -731,7 +758,6 @@
 	supervisors = "United States Secret Service"
 	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS, ACCESS_ENCLAVE_COMMAND, ACCESS_SECURITY, ACCESS_AI_UPLOAD)
 	outfit = /datum/outfit/job/enclave/noncombat/enc_maj
-	roleplay_exclusive_notify = 1
 	req_admin_notify = 1
 	exp_requirements = 2500//Well above Lieutenant for good reason. It's RP exclusive, and comes with some heavy perks.
 
@@ -751,7 +777,7 @@
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/classic_baton = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
-		/obj/item/gun/energy/laser/plasma/pistol/remnant/is = 1,
+		/obj/item/gun/energy/laser/plasma/pistol = 1,
 		/obj/item/storage/belt/holster = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/storage/survivalkit_aid_adv = 1,
