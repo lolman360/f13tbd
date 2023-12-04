@@ -369,8 +369,8 @@
 	name = "Enclave Bunker Duty"
 	icon_state = "usoffduty"
 
-/obj/effect/landmark/start/f13/enclave_synthetic
-	name = "Synthetic"
+/obj/effect/landmark/start/f13/encborg
+	name = "Enclave Synthetic"
 	icon_state = "Cyborg"
 
 /obj/effect/landmark/start/f13/uspilot

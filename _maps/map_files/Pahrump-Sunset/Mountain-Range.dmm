@@ -310,7 +310,7 @@
 	},
 /area/f13/tunnel)
 "dg" = (
-/obj/effect/landmark/start/f13/enclave_synthetic,
+/obj/effect/landmark/start/f13/encborg,
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/enclave)
 "dh" = (
