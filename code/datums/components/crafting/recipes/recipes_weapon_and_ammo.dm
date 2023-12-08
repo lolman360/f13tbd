@@ -147,7 +147,7 @@
 	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/batteryboxplasma //plasmamusket ammo
-	name = "Plasma Can"
+	name = "plasma can box"
 	result = /obj/item/ammo_box/plasmamusket
 	reqs = list(/obj/item/stack/crafting/electronicparts = 2,
 				/obj/item/stack/sheet/glass = 3,
@@ -156,18 +156,6 @@
 	time = 20
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
-
-/datum/crafting_recipe/batterybox //lasmusket ammo
-	name = "Laser Musket battery pack"
-	result = /obj/item/ammo_box/lasmusket
-	reqs = list(/obj/item/stack/crafting/electronicparts = 1,
-				/obj/item/stack/sheet/glass = 2,
-				/obj/item/stack/sheet/metal = 2)
-	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
-	time = 20
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
-
 
 
 

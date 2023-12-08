@@ -430,7 +430,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/hitscan/musket)
 	var/cranks = 0
 	var/cranking = FALSE
-	var/firing = FALSE
+	var/stop_cranking_because_we_fired = FALSE //originally called 'firing' but apparently parent already has a var called firing. whoops
 	var/crank_time = 5 //time per crank in ds
 	var/pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
 	automatic_charge_overlays = FALSE
@@ -440,13 +440,13 @@
 
 /obj/item/gun/energy/lasmusket/attack_self(mob/living/user)
 	if(cranking)
-		to_chat(user, "<span class = 'notice'>You are already cranking the [src]!</span>")
+		to_chat(user, "<span class = 'notice'>You are already cranking [src]!</span>")
 		return
 	cranking = TRUE
-	to_chat(user, "<span class = 'notice'>You start cranking the [src].</span>")
+	to_chat(user, "<span class = 'notice'>You start cranking [src].</span>")
 	slowdown = 0.5
-	while(do_after_advanced(user, crank_time, src, do_after_flags = DO_AFTER_DISALLOW_ACTIVE_ITEM_CHANGE, tool = src) && !firing)
-		to_chat(user, "<span class = 'notice'>You crank the [src].</span>") //debug
+	while(do_after_advanced(user, crank_time, src, do_after_flags = DO_AFTER_DISALLOW_ACTIVE_ITEM_CHANGE, tool = src) && !stop_cranking_because_we_fired)
+		to_chat(user, "<span class = 'notice'>You crank [src].</span>") //debug
 		cranks++
 		playsound(src, pump_sound, 30, 1)
 		switch(cranks)
@@ -459,17 +459,20 @@
 				extra_damage = 5
 				extra_penetration = 0.05
 			if(4)
+				to_chat(user, "<span class='nicegreen'>[src] is fully charged!</span>")
 				extra_damage = 10
 				extra_penetration = 0.1
+		update_icon()
 
-	firing = FALSE
-	to_chat(user, "<span class = 'notice'>You stop cranking the [src]. You cranked it for a total of [cranks/2] seconds!</span>")
+	to_chat(user, "<span class = 'notice'>You stop cranking [src]. You cranked it for a total of [cranks/2] seconds!</span>")
 	cranks = 0
 	cell.use(1)
 	extra_damage = initial(extra_damage)
 	extra_penetration = initial(extra_penetration)
 	slowdown = initial(slowdown)
+	update_icon()
 	cranking = FALSE
+	stop_cranking_because_we_fired = FALSE
 
 /obj/item/gun/energy/lasmusket/update_overlays()
 	. = ..()
@@ -484,8 +487,42 @@
 			. += "[icon_state]_charge4"
 
 /obj/item/gun/energy/lasmusket/do_fire(atom/target, mob/living/user, message = TRUE, params, zone_override = "", bonus_spread = 0, stam_cost = 0)
-	firing = TRUE
+	stop_cranking_because_we_fired = TRUE
 	..()
 	slowdown = initial(slowdown)
 	extra_damage = initial(extra_damage)
 	extra_penetration = initial(extra_penetration)
+
+
+//Laser musket, logarithmic
+//It can be cranked forever and will stack damage increases. Logarithmically, of course, so it doesn't get too out of hand.
+/obj/item/gun/energy/lasmusket/log
+	name = "logarithmic laser musket"
+	desc = "It's mathematical!"
+
+
+/obj/item/gun/energy/lasmusket/log/attack_self(mob/living/user)
+	if(cranking)
+		to_chat(user, "<span class = 'notice'>You are already cranking [src]!</span>")
+		return
+	cranking = TRUE
+	to_chat(user, "<span class = 'notice'>You start cranking [src].</span>")
+	slowdown = 0.5
+	while(do_after_advanced(user, crank_time, src, do_after_flags = DO_AFTER_DISALLOW_ACTIVE_ITEM_CHANGE, tool = src) && !stop_cranking_because_we_fired)
+		to_chat(user, "<span class = 'notice'>You crank [src].</span>") //debug
+		if(!cranks)
+			cell.give(1)
+		cranks++
+		playsound(src, pump_sound, 30, 1)
+		update_icon()
+		extra_damage = 18*log(cranks/2) //it aint logarithmic for nothin
+
+	to_chat(user, "<span class = 'notice'>You stop cranking [src]. You cranked it for a total of [cranks/2] seconds!</span>")
+	cranks = 0
+	update_icon()
+	cell.use(1)
+	extra_damage = initial(extra_damage)
+	extra_penetration = initial(extra_penetration)
+	slowdown = initial(slowdown)
+	cranking = FALSE
+	stop_cranking_because_we_fired = FALSE
