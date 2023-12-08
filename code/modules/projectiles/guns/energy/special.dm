@@ -499,6 +499,8 @@
 /obj/item/gun/energy/lasmusket/log
 	name = "logarithmic laser musket"
 	desc = "It's mathematical!"
+	var/logmult = 10 //note: do not change these for balance. ever. unless you're vving them as an admin, in which it's fine
+	var/logdiv = 2
 
 
 /obj/item/gun/energy/lasmusket/log/attack_self(mob/living/user)
@@ -515,7 +517,7 @@
 		cranks++
 		playsound(src, pump_sound, 30, 1)
 		update_icon()
-		extra_damage = 18*log(cranks/2) //it aint logarithmic for nothin
+		extra_damage = logmult*log(cranks/logdiv) //it aint logarithmic for nothin
 
 	to_chat(user, "<span class = 'notice'>You stop cranking [src]. You cranked it for a total of [cranks/2] seconds!</span>")
 	cranks = 0
