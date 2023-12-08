@@ -434,16 +434,19 @@
 	var/crank_time = 5 //time per crank in ds
 	var/pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
 	automatic_charge_overlays = FALSE
-	extra_damage = -16
+	extra_damage = -10
 	extra_penetration = -0.1
+	slowdown = 0.2 //you can't actually fire it yet
 
 /obj/item/gun/energy/lasmusket/attack_self(mob/living/user)
 	if(cranking)
 		to_chat(user, "<span class = 'notice'>You are already cranking the [src]!</span>")
+		return
 	cranking = TRUE
 	to_chat(user, "<span class = 'notice'>You start cranking the [src].</span>")
-	while(do_after_advanced(user, crank_time, src, do_after_flags = DO_AFTER_DISALLOW_ACTIVE_ITEM_CHANGE))
-		to_chat(user, "You crank the thing") //debug
+	slowdown = 0.5
+	while(do_after_advanced(user, crank_time, src, do_after_flags = DO_AFTER_DISALLOW_ACTIVE_ITEM_CHANGE, tool = src) && !firing)
+		to_chat(user, "<span class = 'notice'>You crank the [src].</span>") //debug
 		cranks++
 		playsound(src, pump_sound, 30, 1)
 		switch(cranks)
@@ -458,19 +461,19 @@
 			if(4)
 				extra_damage = 10
 				extra_penetration = 0.1
-		if(firing)
-			break
 
+	firing = FALSE
 	to_chat(user, "<span class = 'notice'>You stop cranking the [src]. You cranked it for a total of [cranks/2] seconds!</span>")
 	cranks = 0
 	cell.use(1)
 	extra_damage = initial(extra_damage)
 	extra_penetration = initial(extra_penetration)
+	slowdown = initial(slowdown)
 	cranking = FALSE
 
-/obj/item/gun/energy/e_gun/nuclear/update_overlays()
+/obj/item/gun/energy/lasmusket/update_overlays()
 	. = ..()
-	switch(fail_tick)
+	switch(cranks)
 		if(1)
 			. += "[icon_state]_charge1"
 		if(2)
@@ -480,7 +483,9 @@
 		if(4 to INFINITY)
 			. += "[icon_state]_charge4"
 
-/obj/item/gun/energy/lasmusket/do_fire()
+/obj/item/gun/energy/lasmusket/do_fire(atom/target, mob/living/user, message = TRUE, params, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	firing = TRUE
 	..()
-	firing = FALSE
+	slowdown = initial(slowdown)
+	extra_damage = initial(extra_damage)
+	extra_penetration = initial(extra_penetration)
