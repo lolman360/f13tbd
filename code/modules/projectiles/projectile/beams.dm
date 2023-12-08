@@ -293,8 +293,7 @@
 	name = "laser beam"
 	damage = 32
 	armour_penetration = 0.1//It's a concentrated beam of light.
-	wound_bonus = 20//Ditto.
-	bare_wound_bonus = 5//As above.
+	bare_wound_bonus = 18//As above.
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
@@ -325,8 +324,7 @@
 	name = "laser beam"
 	damage = 32
 	armour_penetration = 0.1//It's a concentrated beam of light.
-	wound_bonus = 20//Ditto.
-	bare_wound_bonus = 5//As above.
+	bare_wound_bonus = 18//As above.
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
@@ -358,7 +356,6 @@
 	name = "overcharged laser beam"
 	damage = 15
 	armour_penetration = 0.10
-	wound_bonus = 20
 	bare_wound_bonus = 5
 	hitscan = TRUE
 	light_color = LIGHT_COLOR_BLOOD_MAGIC
@@ -372,8 +369,7 @@
 	damage = 24
 	hitscan = TRUE
 	armour_penetration = 0.08//Less concentrated beam of light.
-	wound_bonus = 5//Ditto.
-	bare_wound_bonus = 2//As above.
+	bare_wound_bonus = 6//As above.
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
@@ -381,7 +377,6 @@
 /obj/item/projectile/beam/laser/pistol/hitscan/pewpew
 	name = "overtuned laser beam"
 	damage = 45
-	wound_bonus = 15
 	bare_wound_bonus = 25
 	armour_penetration = 0.45
 	tracer_type = /obj/effect/projectile/tracer/pulse
@@ -482,7 +477,7 @@
 	name = "tribeam laser"
 	damage = 25 //if all bullets connect, this will do 75.
 	hitscan = TRUE
-	bare_wound_bonus = 5 //tribeam is bad at wounding, as basically its only real downside
+	bare_wound_bonus = -5 //tribeam is bad at wounding, as basically its only real downside
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
@@ -595,7 +590,6 @@
 
 /obj/item/projectile/beam/laser/aer14/hitscan
 	damage = 36
-	wound_bonus = 25
 	armour_penetration = 0.2
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/xray
@@ -622,7 +616,6 @@
 /obj/item/projectile/beam/laser/aer12/hitscan
 	name = "laser beam"
 	damage = 34
-	wound_bonus = 20
 	armour_penetration = 0.15
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/pulse
@@ -646,7 +639,6 @@
 /obj/item/projectile/beam/laser/wattz2k/hitscan
 	name = "sniper laser bolt"
 	damage = 38
-	wound_bonus = 20
 	bare_wound_bonus = 20
 	armour_penetration = 0.2
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
